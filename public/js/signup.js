@@ -13,7 +13,8 @@ $(document).ready(() => {
       first: firstInput.val().trim(),
       last: lastInput.val().trim(),
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+
     };
 
     if (!userData.email || !userData.password || !userData.first || !userData.last) {
@@ -21,21 +22,21 @@ $(document).ready(() => {
     }
     // If we have an email and password, run the signUpUser function
     // userData.first, userData.last, 
-    signUpUser(userData.first, userData.last, userData.email, userData.password);
+    signUpUser(userData.first, userData.last, userData.email, userData.password, userData.points);
     firstInput.val("");
-    lastInput.val("")
+    lastInput.val("");
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser( first, last, email, password,) {
+  function signUpUser( first, last, email, password) {
     $.post("/api/signup", {
       first: first,
       last: last,
       email: email,
-      password: password
+      password: password,
     })
       .then(() => {
         window.location.replace("/members");
