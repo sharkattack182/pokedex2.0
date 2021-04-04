@@ -42,7 +42,7 @@ $.ajax({
                     const newLi = $("<li>");
 
                     const newLink = $("<a>").text(element.name);
-                    newLink.attr("href", "/pokemons?id=" + (i + 1));
+                    newLink.attr("href", "/pokemon?id=" + (i + 1));
 
                     newLi.append(newLink);
                     $("#pokemon").append(newLi);

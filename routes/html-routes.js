@@ -29,5 +29,11 @@ module.exports = function(app) {
 
   app.get("/pokemon-list", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/pokemon-list.html"));
-  })
+  });
+
+  app.get("/pokemon", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/individual.html"));
+  });
 };
+
+

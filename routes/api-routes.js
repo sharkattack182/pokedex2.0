@@ -11,7 +11,7 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
     });
   });
 
@@ -24,12 +24,11 @@ module.exports = function(app) {
       last: req.body.last,
       email: req.body.email,
       password: req.body.password,
-
     })
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch(err => {
+      .catch((err) => {
         res.status(401).json(err);
       });
   });
@@ -50,23 +49,27 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
   });
 
-
+  // getting the information from the PokeAPI
   app.get("/api/all", (req, res) => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
-      .then(response => {
+      .then((response) => {
         res.json(response.data.results);
       });
   });
 
-
+  // individual pokemon
+  app.get("/api/pokemon/:pokemon", (req, res) => {
+    const pokemon = req.params.pokemon;
+    const queryURL =
+      "https://pokeapi.co/api/v2/pokemon-species/" + pokemon + "/";
+    axios.get(queryURL).then((response) => {
+      res.json(response.data);
+    });
+  });
 };
-
-
-
-
