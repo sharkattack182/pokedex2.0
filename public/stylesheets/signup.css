@@ -1,3 +1,4 @@
+
 .pokeball-logo {
     margin-left: 1em
 }
@@ -8,12 +9,12 @@
 
 .red {
     background-color: #DC3545;
-    padding: 2em 0 0;
+    padding: 4em 0 0;
     min-height: 100vh
 }
 
 .form-row {
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     max-width: 90%;
     margin: 0 auto;
     padding: 1em 1.5em 2em;
@@ -30,21 +31,30 @@
   .sign {
       width: 100%;
       text-align: center;
-      font-family:"Pokemon GB"
+  }
+
+  .sign-in-logo {
+      height: 7em;
+      margin: -4rem 0 0;
+
   }
   
   .form-row form {
     font-size: 1.5em;
+    font-family: 'VT323', monospace;
   }
   
   .button, .log {
     width: 100%;
     text-align: center;
     margin-top: 1em;
+    font-family: 'VT323', monospace;
   }
   
   .button button {
     font-size: 1em;
+    background-color: rgb(55, 55, 255);
+    color: yellow;
   }
 
 @font-face {font-family:"Pokemon GB";src:url("Pokemon_GB.eot?") format("eot"),url("Pokemon_GB.woff") format("woff"),url("Pokemon_GB.ttf") format("truetype"),url("Pokemon_GB.svg#PokemonGB") format("svg");font-weight:normal;font-style:normal;}
