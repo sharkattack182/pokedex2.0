@@ -1,58 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Passport Authentication</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link href="stylesheets/pokemon-list.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <a class="navbar-brand" href="/members">
+        <img
+          src="imgs/pokeball-logo.png"
+          alt="pokeball"
+          width="30"
+          height="24"
+          class="pokeball-logo"
+      /></a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/members"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pokemon-list">Pokemon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="red">
+      <div class="text">
+        <img class="logo" src="imgs/pokemon-logo-svg-4.svg" alt="logo">
+      </div>
+      <div class="container">
+        <div id="pokemon" class="card-group"></div>
+      </div>
+      
+    </div>
+
     
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/logout">
-              Logout
-            </a>
-            <a class="navbar-brand" href="/members">
-              User Profile
-            </a>
-          </div>
-        </div>
-      </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $.ajax({
+        url: "/api/all",
+        method: "GET",
+      }).then((results) => {
+        for (let i = 0; i < results.length; i++) {
+          const element = results[i];
+          
+          const newDiv = $("<div>").attr("class", "col-sm-12 col-lg-4")
 
 
-<ul id="pokemon"></ul>
+          const newCard = $("<div>").attr("class", "card");
+          const img = $("<img>");
+          img.attr(
+            "src",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/" +
+              (i + 1) +
+              ".svg"
+          );
+          img.attr("class", "card-img-top poke-pic");
+          const body = $("<div>").attr("class", "card-body");
+          const title = $("<h5>").attr("class", "card-title");
+            title.text(element.name.toUpperCase())
+          // const text = $("<p>").attr("class", "card-text");
 
+          const newLink = $("<a>").text("Read More");
+          newLink.attr("href", "/pokemon?id=" + (i + 1));
+          newLink.attr("class", "info-button")
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-
-$.ajax({
-            url: "/api/all",
-            method: "GET"
-        })
-            .then(results => {
-
-                for (let i = 0; i < results.length; i++) {
-                    const element = results[i];
-
-                    const newLi = $("<li>");
-
-                    const newLink = $("<a>").text(element.name);
-                    newLink.attr("href", "/pokemon?id=" + (i + 1));
-
-                    newLi.append(newLink);
-                    $("#pokemon").append(newLi);
-                }
-            });
-
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-
-</body>
-
+          // newLi.append(newLink);
+        body.append(title, newLink);
+        newCard.append(img, body);
+        newDiv.append(newCard)
+        $("#pokemon").append(newDiv);
+        }
+      });
+    </script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
