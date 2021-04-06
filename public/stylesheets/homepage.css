@@ -46,6 +46,9 @@ body {
     margin-top: 2em;
 }
 
+.trio {
+   display: none;
+}
 .landing-content {
   position: absolute;
   top: 4.1em;
@@ -295,14 +298,18 @@ body {
   margin-top: -3em;
   background-color: rgb(111, 114, 255);
   overflow: hidden;
+  z-index: 0;
 }
 
+.full-logo {
+  max-width: 80vw;
+}
 
 .about-text {
   max-width: 90vw;
-  margin: 1em auto 2em;
+  margin: -3em auto 2em;
   background-color: white;
-  padding: 2em 1em .5em;
+  padding: 5em 1em .5em;
   border-radius: 1em;
 
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
@@ -323,7 +330,128 @@ body {
 
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-  body {
-    display: none;
+  /* LANDING PAGE */
+  
+  .logo {
+    min-width: 75vw;
+    margin: 0 0 0 -0.4em;
+    padding: 0;
   }
+  .two {
+    max-height: none;
+    min-width: 25vw;
+    margin: -5em auto 1em;
+  }
+
+  .landing-content {
+    top: 12em
+  }
+
+  .trainer {
+    display: none
+  }
+  
+  .trio {
+    display: inline-block;
+    max-width: 99%;
+    margin-top: -2em
+  }
+  .landing-content p {
+    font-size: 2em;
+  }
+
+  .view, .sign {
+    font-size: 2em;
+  }
+
+
+
+
+  /* HOW IT WORKS */
+
+  .worx {
+    width: 90vw;
+    margin: 5em auto 2em
+  }
+  .text-container {
+    padding: 3em 2em 4em 2em
+  }
+
+  .text-container p {
+    font-size: 2.5em;
+  }
+
+
+  .ash {
+    position: absolute;
+    height: 75vh;
+    right: -10em;
+    top: 17em
+}
+
+.pokeball {
+  width: 8rem;
+  height: 8rem;
+}
+
+.row .col-12 h3 {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 4em;
+text-transform: uppercase;
+margin-bottom: none !important;
+margin-left: -4em
+}
+
+
+
+
+/* GAIN XP */
+
+
+.white-box {
+  max-width: 50%;
+  padding: 10em 2em 2em;
+  margin: -12em auto 0;
+}
+
+.xp {
+  width: 65vw
+}
+.sub {
+  font-size: 4em;
+}
+
+.white-box p {
+  font-size: 2em;
+  padding-top: 1em
+}
+
+.xp-container {
+  padding: 0;
+  margin: 1em -13em 0 auto;
+}
+
+.venusaur { 
+  max-width: 75vw;
+  margin: -11em auto auto -6em;
+}
+
+.xp-btn {
+  font-size: 2.5em;
+  margin: 1em auto 0 8em
+}
+
+
+/* ABOUT  */
+.about-text {
+  max-width: 80vw;
+  font-size: 2em;
+  padding-top: 5em;
+  margin-top: -3em;
+}
+
+.social-icons {
+  font-size: 3em;
+}
+
 }
