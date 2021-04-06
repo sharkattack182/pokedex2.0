@@ -1,6 +1,7 @@
 body {
   max-width: 100vw;
   max-height: 100vh;
+  overflow-x: hidden;
 }
 
 .pokeball-logo {
@@ -65,7 +66,7 @@ body {
 .landing-content p {
   width: 90%;
   margin: 1em auto .5em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #002e92;
   font-family: 'Gochi Hand', cursive;
   text-transform: uppercase;
@@ -99,12 +100,16 @@ body {
     text-align: center;
     padding-top: 2em;
     background-color: rgb(255, 229, 124);
+    overflow: hidden;
 }
 
+.how-it-works img {
+  max-width: 80vw;
+}
 .text-container {
-    max-width: 60vw;
-    margin: 1em 0 auto 1.2em;
-    padding: 2em 1em;
+    max-width: 70vw;
+    margin: 1em 0 auto -1.5em;
+    padding: 2em 1em 2em 2em;
     background-color: blue;
     border-radius: 1em;
 
@@ -223,3 +228,57 @@ body {
     80% { top: -20px }
     100% { top: 0 }
   } */
+
+
+
+  .xp-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 2em;
+    background-color: rgb(153, 255, 86);
+    overflow: hidden;
+}
+
+.sub {
+  text-transform: uppercase;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.7em;
+}
+
+.white-box {
+  max-width: 80%;
+  background-color: white;
+  margin: -5em auto 0;
+  border-radius: 1em;
+  font-family: 'VT323', monospace;
+  color: #002e92;
+  padding: 5.5em 1em 1em;
+  font-size: 1.2em;
+
+
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+  0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.venusaur {
+  max-width: 90vw;
+  margin: -3.3em auto auto;
+}
+
+.xp-btn {
+  border: none;
+  border-radius: .3em;
+  background-color: #df6497;
+  color: rgb(22, 51, 9);
+  font-size: 1.3em;
+  margin-bottom: 2em;
+
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+  0 16px 16px rgba(0, 0, 0, 0.12);
+}
