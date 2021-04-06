@@ -3,6 +3,15 @@ body {
   max-height: 100vh;
 }
 
+.pokeball-logo {
+    margin-left: 1em
+}
+
+#navbarNav ul {
+    text-align: right;
+}
+
+
 .custom-container {
   position: relative;
   max-width: 100vw;
@@ -19,9 +28,9 @@ body {
 }
 .landing {
   position: relative;
-  height: 790px;
+  height: 100vh;
   width: 100vw;
-  background-color: #dc3545;
+  background-color: #f33b4d;
   padding: 1em 1em 3em;
   text-align: center;
 }
@@ -29,6 +38,11 @@ body {
 .logo-container {
   position: absolute;
   z-index: 2;
+}
+
+.trainer {
+    width: 25%;
+    margin-top: 2em;
 }
 
 .landing-content {
@@ -54,6 +68,7 @@ body {
   font-size: 1.5em;
   color: #002e92;
   font-family: 'Gochi Hand', cursive;
+  text-transform: uppercase;
 }
 
 .sign,
@@ -75,3 +90,136 @@ body {
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
+
+
+.how-it-works {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 2em;
+    background-color: rgb(255, 229, 124);
+}
+
+.text-container {
+    max-width: 60vw;
+    margin: 1em 0 auto 1.2em;
+    padding: 2em 1em;
+    background-color: blue;
+    border-radius: 1em;
+
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+    
+.text-container p {
+    margin: 0;
+    margin-right: 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+
+.ash {
+    position: absolute;
+    height: 50vh;
+    right: -4em;
+    top: 6.5em
+}
+
+.pokeballs {
+    position: relative;
+    margin-top: 3em;
+}
+.row .col-12 h3 {
+    font-family: 'Gochi Hand', cursive;
+  text-transform: uppercase;
+  margin-bottom: none !important
+}
+
+/* POKEBALLS */
+.row {
+    max-width: 90vw;
+    margin: 1em auto;
+}
+.first {
+    margin-left: -1em;
+}
+.center {
+    margin: 0 1.4em
+}
+.right {
+    margin: 0 0 0 3.5em
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* Poké Styles */
+  .pokeball {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset -10px 10px 0 10px #ccc;
+    animation: fall .25s ease-in-out,
+               shake 1.25s cubic-bezier(.36,.07,.19,.97) 3;
+  }
+  .pokeball::before,
+  .pokeball::after {
+    content:"";
+    position: absolute;
+  }
+  .pokeball::before {
+    background: #f33b4d;
+    width: 100%;
+    height: 50%;
+    left: 0
+  }
+  .pokeball::after {
+    top: calc(50% - 7px);
+    width: 102%;
+    height: 7px;
+    background: #000;
+    left: 0
+  }
+  .pokeball__button {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 17px);
+    width: 2.2em;
+    height: 2.2em;
+    background: #7f8c8d;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 0 6px black;
+    animation: blink .5s alternate 7;
+  }
+  /* Animation */
+  @keyframes blink {
+    from { background: #eee;}
+    to { background: #e74c3c; }
+  }
+  /* @keyframes shake {
+    0 { transform: translate(0, 0) rotate(0); }
+    20% { transform: translate(-10px, 0) rotate(-20deg); }
+    30% { transform: translate(10px, 0) rotate(20deg); }
+    50% { transform: translate(-10px, 0) rotate(-10deg); }
+    60% { transform: translate(10px, 0) rotate(10deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  } */
+  /* @keyframes fall {
+    0% { top: -200px }
+    60% { top: 0 }
+    80% { top: -20px }
+    100% { top: 0 }
+  } */
