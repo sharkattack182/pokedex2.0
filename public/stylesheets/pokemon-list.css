@@ -10,9 +10,15 @@
 
 .red {
     background-color: #DC3545;
+    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);;
     padding: 4em 0 0;
     min-height: 100vh;
     padding: 1.5em
+}
+
+
+.card-body {
+    position: relative;
 }
 
 
@@ -22,6 +28,8 @@
     text-align: center;
     font-family: 'VT323', monospace;
     min-height: 300px;
+    border-radius: 1em;
+    min-height: 378px;
         
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 
     0 2px 2px rgba(0,0,0,0.12), 
@@ -35,24 +43,42 @@
     max-height: 300px;
     margin-left: -2.5rem;
     padding-top: 1em;
-};
+}
 
 .pokeball-logo {
     margin-left: .5em;
-};
+}
 
 #navbarNav ul {
     text-align: right;
-};
+}
 
 
 .info-button {
-    background-color: rgb(55, 55, 255);
-    color: yellow;
-    padding: .5em;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+
+.card-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 1.3em;
 }
 
 
 .logo {
     width: 100%
+}
+
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    #pokemon .card {
+        min-height: 402px;
+    }
 }
