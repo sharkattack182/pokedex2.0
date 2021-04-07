@@ -81,4 +81,9 @@
     #pokemon .card {
         min-height: 402px;
     }
+
+    .pokeball-logo {
+        margin-left: 4.8em
+    }
+    
 }

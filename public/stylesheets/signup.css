@@ -1,4 +1,8 @@
-
+body, html {
+  max-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
 .pokeball-logo {
     margin-left: 1em
 }
@@ -9,8 +13,10 @@
 
 .red {
     background-color: #DC3545;
+    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);;
     padding: 4em 0 0;
-    min-height: 100vh
+    min-height: 100vh;
+    margin-bottom: 0
 }
 
 .form-row {
@@ -57,3 +63,32 @@
     color: yellow;
   }
 
+  .misty {
+    display: none;
+  }
+  
+
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .misty {
+      display: inline-block;
+      position: absolute;
+      height: 900px;
+      left: 28em;
+      top: -3em
+    }
+
+    .form-row {
+      margin-top: 3em
+    }
+    .form-row form {
+      padding-top: 2em;
+      font-size: 2.5em;
+    }
+
+    .sign-in-logo {
+      height: 12em;
+      margin: -5rem 0 0;
+
+    }
+
+  }
