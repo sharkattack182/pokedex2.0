@@ -7,8 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
 
     <link
       rel="stylesheet"
@@ -17,8 +21,11 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=VT323&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <link href="stylesheets/individual.css" rel="stylesheet" />
   </head>
   <body>
@@ -63,7 +70,7 @@
       <div class="name-container">
         <span class="pokemon-name"></span>
       </div>
-      
+
       <div class="pokedex-screen"></div>
       <div class="sprites"></div>
       <div class="type-container"></div>
@@ -71,12 +78,7 @@
         <span class="first-part"></span>
         <span class="second-part"></span>
       </div>
-  
-      </div>
-    
-
-
-
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -94,91 +96,110 @@
             pokemonId +
             ".svg"
         );
-        newImg.addClass("poke-img")
+        newImg.addClass("poke-img");
         $(".pokedex-screen").append(newImg);
         // $(".pokedex-screen").addClass(result.types[0].type.name);
 
-        if(result.id < 10) {
-          $(".pokemon-name").text("00" + result.id + " " + result.forms[0].name)
+        if (result.id < 10) {
+          $(".pokemon-name").text(
+            "00" + result.id + " " + result.forms[0].name
+          );
         } else if (result.id > 10 && result.id < 100) {
-          $(".pokemon-name").text("0" + result.id + " " + result.forms[0].name)
+          $(".pokemon-name").text("0" + result.id + " " + result.forms[0].name);
         } else {
-          $(".pokemon-name").text(result.id + " " + result.forms[0].name)
+          $(".pokemon-name").text(result.id + " " + result.forms[0].name);
         }
-        
+
         const typesArr = result.types;
         for (let i = 0; i < typesArr.length; i++) {
           const element = typesArr[i];
           const newTypeDiv = $("<div>");
           newTypeDiv.text(element.type.name);
           newTypeDiv.addClass(element.type.name);
-          newTypeDiv.addClass("type-div")
-          $(".type-container").append(newTypeDiv)
+          newTypeDiv.addClass("type-div");
+          $(".type-container").append(newTypeDiv);
         }
-        
+
         // newImg.attr("height", "200px");
 
-        const bioString = result.name + " is a " + result.types[0].type.name + " pokemon. "
+        const bioString =
+          result.name + " is a " + result.types[0].type.name + " pokemon. ";
 
         $.ajax({
-        url: result.types[0].type.url,
-        method: "GET",
-      }).then((result) => {
-        console.log(result)
-        let specialStr = "";
-        const damageArr = result.damage_relations.double_damage_to
-        for (let i = 0; i < damageArr.length; i++) {
-          const element = damageArr[i];
-          if(i < damageArr.length - 1) {
-            specialStr += element.name + ", "
+          url: result.types[0].type.url,
+          method: "GET",
+        }).then((result) => {
+          console.log(result);
+          let specialStr = "";
+          const damageArr = result.damage_relations.double_damage_to;
+
+          if (damageArr.length === 0) {
+            specialStr = "no ";
           } else {
-            specialStr += "and " + element.name
+            for (let i = 0; i < damageArr.length; i++) {
+              const element = damageArr[i];
+
+              if (i < damageArr.length - 1 && i > 0) {
+                specialStr += element.name + ", ";
+              } else if (damageArr.length === 1) {
+                specialStr += element.name;
+              } else {
+                specialStr += "and " + element.name;
+              }
+            }
           }
-          
-        };
 
-        let weakStr = "";
-        const weaknessArr = result.damage_relations.double_damage_from
-        for (let i = 0; i < weaknessArr.length; i++) {
-          const element = weaknessArr[i];
-          if(i < damageArr.length - 1) {
-            weakStr += element.name + ", "
-          } else {
-            weakStr += "and " + element.name
+          let weakStr = "";
+          const weaknessArr = result.damage_relations.double_damage_from;
+
+          if (weaknessArr.length === 0) {
+              weakStr += "all";
+            } else {
+              for (let i = 0; i < weaknessArr.length; i++) {
+            const element = weaknessArr[i];
+            if (i < weaknessArr.length - 1 && i >= 0) {
+              weakStr += element.name + ", ";
+            } else if (weaknessArr.length === 1) {
+              weakStr += element.name;
+            } else {
+              weakStr += "and " + element.name;
+            }
           }
+            }
+
           
-        };
 
-        console.log(specialStr)
-        const bio = "Meaning it specializes against " + specialStr + " types";
-        const weaknesses = " And is vulnerable against " + weakStr + " types"
+          console.log(weaknessArr);
+        console.log(weakStr)
 
-        let fullStr = bio.concat(weaknesses);
+          const bio = "Meaning it specializes against " + specialStr + " types";
+          const weaknesses = " And is vulnerable against " + weakStr + " types";
 
-        $(".second-part").text(fullStr)
-      });
+          let fullStr = bio.concat(weaknesses);
 
-        $(".first-part").text(bioString)
+          $(".second-part").text(fullStr);
+        });
+
+        $(".first-part").text(bioString);
 
         console.log(result);
-
       });
     </script>
     <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
