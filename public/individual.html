@@ -74,9 +74,9 @@
       <div class="pokedex-screen"></div>
       <div class="sprites"></div>
       <div class="type-container"></div>
-      <div class="pokemon-bio">
-        <span class="first-part"></span>
-        <span class="second-part"></span>
+      <div class="pokemon-bio-container"></div>
+      <div class="evolution-container">
+
       </div>
     </div>
 
@@ -125,62 +125,46 @@
         const bioString =
           result.name + " is a " + result.types[0].type.name + " pokemon. ";
 
+
+
+
         $.ajax({
-          url: result.types[0].type.url,
-          method: "GET",
-        }).then((result) => {
-          console.log(result);
-          let specialStr = "";
-          const damageArr = result.damage_relations.double_damage_to;
+        url: "https://pokeapi.co/api/v2/pokemon-species/" + pokemonId + "/",
+        method: "GET",
+      }).then((result) => {
+        console.log(result);
+        var body = $(".container")
 
-          if (damageArr.length === 0) {
-            specialStr = "no ";
-          } else {
-            for (let i = 0; i < damageArr.length; i++) {
-              const element = damageArr[i];
+        if(result.evolves_from_species === null) {
+          var addBtn = $("<div>");
+          addBtn.addClass("add-button");
+          addBtn.text("Add Pokemon");
+          body.append(addBtn)
+        }
 
-              if (i < damageArr.length - 1 && i > 0) {
-                specialStr += element.name + ", ";
-              } else if (damageArr.length === 1) {
-                specialStr += element.name;
-              } else {
-                specialStr += "and " + element.name;
-              }
-            }
-          }
 
-          let weakStr = "";
-          const weaknessArr = result.damage_relations.double_damage_from;
+        for (let i = 0; i < 6; i+=2) {
+          const element = result.flavor_text_entries[i];
+          let text = element.flavor_text;
+        let bio = text.replaceAll("\f", "\n")
+        var newPokeBio = $("<div>");
+        newPokeBio.addClass("pokemon-bio")
+        $(newPokeBio).text(bio);
+        $(".pokemon-bio-container").append(newPokeBio)
+        }
+        
+      });
 
-          if (weaknessArr.length === 0) {
-              weakStr += "all";
-            } else {
-              for (let i = 0; i < weaknessArr.length; i++) {
-            const element = weaknessArr[i];
-            if (i < weaknessArr.length - 1 && i >= 0) {
-              weakStr += element.name + ", ";
-            } else if (weaknessArr.length === 1) {
-              weakStr += element.name;
-            } else {
-              weakStr += "and " + element.name;
-            }
-          }
-            }
 
-          
 
-          console.log(weaknessArr);
-        console.log(weakStr)
+      $.ajax({
+        url: "https://pokeapi.co/api/v2/evolution-chain/" + pokemonId + "/",
+        method: "GET",
+      }).then((result) => {
+        console.log(result)
 
-          const bio = "Meaning it specializes against " + specialStr + " types";
-          const weaknesses = " And is vulnerable against " + weakStr + " types";
+      });
 
-          let fullStr = bio.concat(weaknesses);
-
-          $(".second-part").text(fullStr);
-        });
-
-        $(".first-part").text(bioString);
 
         console.log(result);
       });
