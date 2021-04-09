@@ -28,7 +28,7 @@
     margin: 1em auto -3.2em;
 }
 
-.user-info {
+.user-info , .user-pokedex {
     max-width: 80vw;
     background-color: white;
     margin: 0 auto;
@@ -40,6 +40,16 @@
     0 4px 4px rgba(0,0,0,0.12), 
     0 8px 8px rgba(0,0,0,0.12),
     0 16px 16px rgba(0,0,0,0.12);
+}
+
+.users-pokemon {
+    max-width: 90%;
+    margin: 0 auto
+}
+
+.user-pokedex {
+    padding: 0 .5em 1em;
+    margin-top: 3em
 }
 
 h4 {
@@ -115,4 +125,26 @@ h4 {
 
 .badge-text {
     margin: 0 auto .5em
+}
+
+.pokedex-entry {
+    text-align: center;
+    padding: 0 .5em;
+    margin: 0 1em
+}
+.pokedex-entry p {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.attr {
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.starters-logo {
+    max-width: 90%;
+    margin: -2em 1em 0;
 }

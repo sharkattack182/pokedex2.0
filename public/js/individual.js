@@ -51,7 +51,7 @@ $.ajax({
   console.log(result);
   var body = $(".container")
 
-  if(result.evolves_from_species === null) {
+  if(result.evolves_from_species === null && result.is_legendary === false && result.is_mythical === false) {
     var addBtn = $("<button>");
     addBtn.addClass("add-button");
     addBtn.text("Add Pokemon");
