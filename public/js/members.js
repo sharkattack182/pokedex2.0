@@ -16,6 +16,10 @@ $(document).ready(() => {
 
   $.get("/api/pokemons").then(data => {
     console.log(data);
+
+    if(data.length === 0) {
+      $(".user-pokedex").css("display", "none")
+    }
     for (let i = 0; i < data.length; i++) {
       const element = data[i];
       console.log(element)
