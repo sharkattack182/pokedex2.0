@@ -79,5 +79,49 @@ module.exports = function(app) {
     });
   });
 
+
+    // app.get("/api/pokemons", isAuthenticated, (req, res) => {
+      app.get("/api/pokemons", (req, res) => {
+        // db.Pokemon.findAll({ where: { UserId: req.user.id }})
+        db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
+          const requests = pokemons.map(pokemon => {
+            return axios.get(
+              `https://pokeapi.co/api/v2/pokemon/${pokemon.pokemonId}`
+            );
+          });
+    
+          Promise.all(requests).then(results => {
+            res.json(results.map(r => r.data));
+          });
+        });
+      });
+
+
+  // app.post("/api/pokemons", isAuthenticated, (req, res) => {
+    app.post("/api/pokemons", (req, res) => {
+      const pokemonId = req.body.pokemonId;
+  
+      db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
+        if (pokemons.length >= 6) {
+          res.json({ message: "Limit exceeded" });
+        } else {
+          axios
+            .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
+            .then(result => {
+              //console.log(result.data);
+              return db.Pokemon.create({
+                UserId: req.user.id,
+                //UserId: req.user.id,
+                pokemonId: pokemonId,
+                name: result.data.name,
+                imageUrl: result.data.sprites.front_default
+              });
+            })
+            .then(newPokemon => {
+              res.json(newPokemon);
+            });
+        }
+      });
+    });
   
 };
