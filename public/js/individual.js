@@ -16,6 +16,8 @@ $.ajax({
   $(".pokedex-screen").append(newImg);
   // $(".pokedex-screen").addClass(result.types[0].type.name);
 
+  console.log(result)
+
   if (result.id < 10) {
     $(".pokemon-name").text(
       "00" + result.id + " " + result.forms[0].name
@@ -36,28 +38,23 @@ $.ajax({
     $(".type-container").append(newTypeDiv);
   }
 
-  // newImg.attr("height", "200px");
-
-  const bioString =
-    result.name + " is a " + result.types[0].type.name + " pokemon. ";
-
-
-
 
   $.ajax({
   url: "https://pokeapi.co/api/v2/pokemon-species/" + pokemonId + "/",
   method: "GET",
 }).then((result) => {
   console.log(result);
-  var body = $(".container")
+  var body = $(".container-flex")
+  // console.log(captureRate < 200);
 
   if(result.evolves_from_species === null && result.is_legendary === false && result.is_mythical === false) {
-    var addBtn = $("<button>");
+    console.log("Can Capture")
+    var addBtn = $("<div>");
     addBtn.addClass("add-button");
     addBtn.text("Add Pokemon");
     addBtn.attr("id", "add-pokemon")
     body.append(addBtn)
-  };
+  } 
 
 
 

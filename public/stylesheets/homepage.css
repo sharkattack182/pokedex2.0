@@ -12,6 +12,10 @@ body {
     text-align: right;
 }
 
+.navbar-nav {
+  margin-right: 7em;
+  margin-left: auto;
+}
 
 .custom-container {
   position: relative;
@@ -104,6 +108,10 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
+
+.evo-trio {
+  display: none
+}
 
 .how-it-works {
     position: relative;
@@ -499,5 +507,61 @@ margin-left: -4em
 .social-icons {
   font-size: 3em;
 }
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  
+  .pokeball-logo {
+    margin-left: 7.5em
+}
+
+
+  .landing {
+    overflow: hidden;
+  }
+  
+  .trainer {
+    display: none;
+  }
+
+  .landing-content {
+    width: 50%;
+    margin-top: 4em;
+    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+
+  .logo-container {
+    position: relative;
+    /* z-index: 2;
+    left: 0;
+    right: 0; */
+    margin: 0;
+    padding: 4em 0 0;
+    width: 50%;
+  }
+
+  .landing-content p {
+    width: 90%;
+    margin: 1em auto .5em;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-family: 'Gochi Hand', cursive;
+    text-transform: uppercase;
+
+  }
+
+  .evo-trio {
+    display: block;
+    height: 120vh;
+    padding: 0;
+    float: right;
+    margin: -15em -2em 0 0;
+    opacity: 40%;
+  }
 
 }

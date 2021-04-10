@@ -12,7 +12,7 @@ body {
 }
 
 
-.container {
+.container-flex {
     padding: 2em 0 2em;
     background-color: #f33b4d;
     height: fit-content;
