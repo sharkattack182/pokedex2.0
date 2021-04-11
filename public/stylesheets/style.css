@@ -18,6 +18,11 @@ nav {
   z-index: 10000;
 }
 
+#navbarNav ul {
+  text-align: right;
+  margin-right: 0;
+}
+
 
 .two-mini {
   max-height: 35px;

@@ -396,6 +396,11 @@ body {
     margin-left: 5em
 }
 
+
+#navbarNav ul {
+  text-align: right;
+  margin-right: 6em;
+}
   
   /* LANDING PAGE */
   
@@ -543,6 +548,11 @@ margin-left: -4em
     margin-left: 6em
 }
 
+#navbarNav ul {
+  text-align: right;
+  margin-right: 6em;
+  margin-left: auto;
+}
 
   .landing {
     overflow: hidden;

@@ -10,6 +10,7 @@ body {
 
 #navbarNav ul {
     text-align: right;
+    margin-right: 0;
 }
 
 nav {
@@ -104,10 +105,25 @@ nav {
     .pokeball-logo {
         margin-left: 4.8em
     }
+
+    .container {
+        max-width: 90%
+    }
+
+    #navbarNav ul {
+        text-align: right;
+        margin-right: 6em;
+        margin-left: auto;
+    }
 }
 
 
 @media only screen and (min-width: 1200px) {
+
+    .pokeball-logo {
+        margin-left: 6em
+    }
+    
 
     .text {
         text-align: center;
@@ -118,4 +134,9 @@ nav {
         margin: 0 auto 0;
     }
     
+    #navbarNav ul {
+        text-align: right;
+        margin-right: 6em;
+        margin-left: auto;
+    }
 }

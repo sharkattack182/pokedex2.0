@@ -10,6 +10,7 @@ body {
 
 #navbarNav ul {
     text-align: right;
+    margin-right: 0;
 }
 
 nav {
