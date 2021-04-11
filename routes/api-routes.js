@@ -56,6 +56,7 @@ module.exports = function(app) {
         username: req.user.username,
         email: req.user.email,
         id: req.user.id,
+        level: req.user.level
       });
     }
   });

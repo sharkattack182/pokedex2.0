@@ -33,6 +33,11 @@ module.exports = function(sequelize, DataTypes) {
     points: {
       type: DataTypes.INTEGER,
       defaultValue: 500
+    },
+
+    level: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
     }
 
   });
