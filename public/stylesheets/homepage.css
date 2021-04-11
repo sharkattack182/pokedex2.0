@@ -12,7 +12,11 @@ body {
 
 .two-mini {
   max-height: 35px;
-  opacity: 70%;
+  
+}
+
+.navbar-toggler {
+  opacity: 100%;
 }
 
 #navbarNav ul {
@@ -288,6 +292,8 @@ nav {
     padding-top: 5em;
     padding-bottom: 3em;
     overflow-y: hidden;
+
+    background: linear-gradient(rgb(153, 255, 86), rgb(62, 155, 0));
 }
 
 .sub {
@@ -388,7 +394,6 @@ nav {
   overflow-x:hidden;
 }
 
-  /* NAV */
   .pokeball-logo {
     margin-left: 5em
 }
@@ -537,7 +542,7 @@ margin-left: -4em
 @media only screen and (min-width: 1200px) {
   
   .pokeball-logo {
-    margin-left: 7.5em
+    margin-left: 6em
 }
 
 
@@ -552,7 +557,7 @@ margin-left: -4em
   .landing-content {
     width: 50%;
     margin-top: 4em;
-    margin-left: 0;
+    margin-left: -.3em;
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
   }
@@ -591,7 +596,9 @@ margin-left: -4em
   /* HOW IT WORKS */
   .how-it-works {
     position: relative;
-    height: 100vh;
+    
+    min-height: 100vh;
+    max-height: 110vh;
     padding-top: 0;
 }
 
@@ -601,7 +608,58 @@ margin-left: -4em
 
   .text-container {
     max-width: 50vw;
-    margin: 1em auto 1em 3em;
+    margin: 1em auto 1em 10em;
   }
+  .worx {
+    margin-top: 3em;
+    margin-left: 9em;
+  }
+
+  .pokeballs {
+    max-width: 50vw;
+    margin: 3em auto 3em 20em;
+  }
+
+  .pokeballs h3 {
+    margin-left: -3em
+  }
+
+.ash {
+  position: relative;
+  float: right;
+  height: 80%;
+  width: auto !important;
+  margin-top: -2em;
+}
+
+
+/* XP  */
+
+.xp-section {
+  height: 107vh;
+  
+}
+
+.xp-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: 2.7em;
+}
+
+.venusaur {
+  float: left;
+  margin: -28em auto;
+  max-height: 98vh;
+  margin-bottom: 2em;
+}
+
+
+
+.about-text {
+  max-width: 60%;
+  margin-top: 12em;
+}
+
+
 
 }
