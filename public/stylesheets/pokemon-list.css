@@ -1,19 +1,38 @@
+body {
+    background-color: #f33b4d;
+}
+
+
 .pokeball-logo {
-    margin-left: 1em
+    margin-left: 1em;
+
 }
 
 #navbarNav ul {
     text-align: right;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 10000;
+  }
 
 
+  .two-mini {
+    max-height: 35px;
+    
+  }
+  
 .red {
-    background-color: #DC3545;
-    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);;
+    
     padding: 4em 0 0;
     min-height: 100vh;
-    padding: 1.5em
+    padding: 1.5em;
+    margin-top: 3em
 }
 
 
@@ -85,4 +104,18 @@
     .pokeball-logo {
         margin-left: 4.8em
     }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .text {
+        text-align: center;
+    }
+    
+    .logo {
+        width: 70%;
+        margin: 0 auto 0;
+    }
+    
 }
