@@ -1,6 +1,7 @@
 $(document).ready(() => {
   $.get("/api/user_data").then((data) => {
     console.log(data);
+    console.log(data.id)
 
     $(".name").text(data.username);
     let shuffledQuestions, currentQuestionIndex;
@@ -70,8 +71,33 @@ $(document).ready(() => {
     }
 
     function endGame() {
-        console.log(score);
+        console.log("END OF GAME SCORE: " + score);
         $(".quiz-container").css("display", "none");
+
+        console.log(data.points);
+        console.log(data.level);
+        var addPoints = score * 100;
+        var newLevel = data.level + 1;
+        
+
+        $.ajax({
+            url: "/api/user_data",
+            method: "PUT",
+            data: {
+                id: data.id,
+                level: newLevel,
+                point: addPoints
+            },
+            error: function(req, err) {
+                console.log(err)
+                // window.location.replace("/members");
+            }
+        }).then(result => {
+            
+            console.log("user info updated");
+            console.log(result);
+            // window.location.replace("/members");
+        });
     }
     });
 

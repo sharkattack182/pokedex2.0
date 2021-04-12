@@ -74,6 +74,7 @@ $("#add-pokemon").on("click", function (event) {
         
         console.log("Pokemon " + pokemonId + " added to your Pokedex.");
         console.log(result);
+        window.location.replace("/members");
     });
 
 });

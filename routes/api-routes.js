@@ -25,7 +25,6 @@ module.exports = function(app) {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -56,7 +55,7 @@ module.exports = function(app) {
         username: req.user.username,
         email: req.user.email,
         id: req.user.id,
-        level: req.user.level
+        level: req.user.level,
       });
     }
   });
@@ -80,49 +79,62 @@ module.exports = function(app) {
     });
   });
 
-
-    // app.get("/api/pokemons", isAuthenticated, (req, res) => {
-      app.get("/api/pokemons", (req, res) => {
-        // db.Pokemon.findAll({ where: { UserId: req.user.id }})
-        db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
-          const requests = pokemons.map(pokemon => {
-            return axios.get(
-              `https://pokeapi.co/api/v2/pokemon/${pokemon.pokemonId}`
-            );
-          });
-    
-          Promise.all(requests).then(results => {
-            res.json(results.map(r => r.data));
-          });
-        });
+  // app.get("/api/pokemons", isAuthenticated, (req, res) => {
+  app.get("/api/pokemons", (req, res) => {
+    // db.Pokemon.findAll({ where: { UserId: req.user.id }})
+    db.Pokemon.findAll({ where: { UserId: req.user.id } }).then((pokemons) => {
+      const requests = pokemons.map((pokemon) => {
+        return axios.get(
+          `https://pokeapi.co/api/v2/pokemon/${pokemon.pokemonId}`
+        );
       });
 
-
-  // app.post("/api/pokemons", isAuthenticated, (req, res) => {
-    app.post("/api/pokemons", (req, res) => {
-      const pokemonId = req.body.pokemonId;
-  
-      db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
-        if (pokemons.length >= 6) {
-          res.json({ message: "Limit exceeded" });
-        } else {
-          axios
-            .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
-            .then(result => {
-              //console.log(result.data);
-              return db.Pokemon.create({
-                UserId: req.user.id,
-                //UserId: req.user.id,
-                pokemonId: pokemonId,
-                name: result.data.name,
-                imageUrl: result.data.sprites.front_default
-              });
-            })
-            .then(newPokemon => {
-              res.json(newPokemon);
-            });
-        }
+      Promise.all(requests).then((results) => {
+        res.json(results.map((r) => r.data));
       });
     });
-  
+  });
+
+  // app.post("/api/pokemons", isAuthenticated, (req, res) => {
+  app.post("/api/pokemons", (req, res) => {
+    const pokemonId = req.body.pokemonId;
+
+    db.Pokemon.findAll({ where: { UserId: req.user.id } }).then((pokemons) => {
+      if (pokemons.length >= 6) {
+        res.json({ message: "Limit exceeded" });
+      } else {
+        axios
+          .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
+          .then((result) => {
+            //console.log(result.data);
+            return db.Pokemon.create({
+              UserId: req.user.id,
+              //UserId: req.user.id,
+              pokemonId: pokemonId,
+              name: result.data.name,
+              imageUrl: result.data.sprites.front_default,
+            });
+          })
+          .then((newPokemon) => {
+            res.json(newPokemon);
+          });
+      }
+    });
+  });
+
+  app.put("/api/user_data", function(req, res) {
+    db.User.update(
+      {
+        points: req.body.points,
+        level: req.body.level,
+      },
+      {
+        where: {
+          id: req.body.id,
+        },
+      }
+    ).then(function(result) {
+      res.json(result);
+    });
+  });
 };
