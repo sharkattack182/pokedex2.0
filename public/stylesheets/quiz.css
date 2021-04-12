@@ -68,6 +68,10 @@ body {
     font-size: 1.5em;
   }
 
+  .mini-logo {
+      margin: 1em auto 2em;
+      }
+
   .take-test h2 {
       font-size: 1.4em;
       font-family: 'Gochi Hand', cursive;

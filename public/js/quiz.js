@@ -3,7 +3,10 @@ $(document).ready(() => {
     console.log(data);
 
     $(".name").text(data.username);
-    let shuffledQuestions, currentQuestionIndex, score;
+    let shuffledQuestions, currentQuestionIndex;
+    let score;
+    
+
 
     $(".take-test").on("click", function() {
       
@@ -12,9 +15,8 @@ $(document).ready(() => {
       var quiz = quizData.quiz;
       console.log(quiz);
       shuffledQuestions = quiz.sort(() => Math.random() - .5);
-      currentQuestionIndex = 0
+      currentQuestionIndex = 0;
       score = 0
-
       
 
       $(".welcome-container").css("display", "none");
@@ -22,10 +24,13 @@ $(document).ready(() => {
 
     console.log("Started");
     setNextQuestion()
-    });
-
 
     function setNextQuestion() {
+        
+       if(shuffledQuestions.length < currentQuestionIndex + .2) {
+        endGame()
+    } 
+
         showQuestion(shuffledQuestions[currentQuestionIndex])
     }
 
@@ -48,29 +53,30 @@ $(document).ready(() => {
         const selectedButton = e.target;
         let correct = selectedButton.dataset.correct;
         console.log(correct)
-        if(correct === true) {
+        if(correct === "true") {
             score ++;
             currentQuestionIndex ++
             console.log(score);
             $(".choices").empty();
             setNextQuestion()
         } else {
+            score +=0;
             currentQuestionIndex ++
             console.log(score);
             $(".choices").empty();
             setNextQuestion()
         }
 
-       if(shuffledQuestions.length < currentQuestionIndex) {
-            endGame()
-        }
-        
-        
     }
 
     function endGame() {
-        console.log(score)
+        console.log(score);
+        $(".quiz-container").css("display", "none");
     }
+    });
+
+
+
 
     var badges = [
         {
