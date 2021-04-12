@@ -1,0 +1,116 @@
+body {
+    width:100%;
+    overflow-x:hidden;
+    overflow-y: visible;
+    padding-top: 60px;
+    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
+  }
+  
+  .pokeball-logo {
+      margin-left: 1em
+  }
+  
+  .two-mini {
+    max-height: 35px;
+    
+  }
+  
+  .navbar-toggler {
+    opacity: 100%;
+  }
+  
+  #navbarNav ul {
+      text-align: right;
+      margin-right: 0;
+  }
+  
+  /* .navbar-collapse {
+    text-align: right;
+  } */
+  
+  
+  
+  .navbar-nav {
+    margin-right: 7em;
+    margin-left: auto;
+  }
+  
+  .welcome-container {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+  }
+
+
+  .welcome, .take-test {
+      background-color: rgb(35, 204, 255);
+      max-width: 80vw;
+      margin: 2em auto;
+      padding: 2em 1em;
+      border-radius: 1em;
+      text-align: center;
+      font-size: 1em;
+
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
+      0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+      0 16px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .welcome h1 {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: white;
+  }
+
+  .welcome p {
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+  }
+
+  .take-test h2 {
+      font-size: 1.4em;
+      font-family: 'Gochi Hand', cursive;
+      text-transform: uppercase;
+  }
+
+  .take-test {
+    padding: 1em;
+    background-color: white;
+}
+
+  .quiz-container {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+
+  .quiz-content, .quiz-question{
+    background-color: rgb(255, 255, 255);
+    max-width: 80vw;
+    margin: 2em auto;
+    padding: 2em 1em;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 1em;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  }
+
+.quiz-content h1 {
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+}
+
+
+.quiz-question {
+    margin: .5em auto;
+    padding: .5em;
+    font-size: 1em;
+    background-color: yellow;
+    font-family: 'VT323', monospace;
+    color: rgb(8, 8, 168)
+}

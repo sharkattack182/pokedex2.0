@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=VT323&display=swap" rel="stylesheet">
-    <link href="stylesheets/homepage.css" rel="stylesheet" />
+    <link href="stylesheets/quiz.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -62,7 +62,24 @@
     </div>
     </nav>
 
+    <div class="welcome-container">
+      <div class="welcome">
+        <h1>Welcome <span class="name"></span>!</h1>
+        <p>I see you have been busy learning about all of the different kinds of pokemon!</p>
+        <p>Would you like to test your knowledge?</p>
+      </div>
+      <div class="take-test"><h2>Take a Test</h2></div>
+    </div>
 
+    
+    <div class="quiz-container">
+      <div class="quiz-content">
+        <h1>Who's that Pokemon?</h1>
+        <span class="img"></span>
+        
+      </div>
+      <div class="choices"></div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -80,5 +97,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/quiz.js"></script>
   </body>
 </html>
