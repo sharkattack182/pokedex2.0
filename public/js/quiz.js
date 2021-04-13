@@ -10,7 +10,7 @@ $(document).ready(() => {
 
 
     $(".take-test").on("click", function() {
-      
+
       var quizNum = data.level - 1;
       var quizData = badges[quizNum];
       var quiz = quizData.quiz;
@@ -97,6 +97,8 @@ $(document).ready(() => {
             console.log("user info updated");
             console.log(result);
             // window.location.replace("/members");
+            
+            
         });
     }
     });
@@ -168,30 +170,50 @@ $(document).ready(() => {
           name: "Cascade Badge",
           quiz: [
             {
-              title: "Goldeen",
-              choices: ["Goldeen", "Starmie", "Shellder", "Horsea"],
-              answer: "A",
-            },
-            {
-              title: "Staryu",
-              choices: ["Shellder", "Staryu", "Starmie", "Horsea"],
-              answer: "B",
-            },
-            {
-              title: "Shellder",
-              choices: ["Horsea", "Goldeen", "Shellder", "Staryu"],
-              answer: "C",
-            },
-            {
-              title: "Horsea",
-              choices: ["Staryu", "Starmie", "Horsea", "Goldeen"],
-              answer: "C",
-            },
-            {
-              title: "Starmie",
-              choices: ["Staryu", "Goldeen", "Starmie", "Shellder"],
-              answer: "C",
-            },
+                title: "Goldeen",
+                choices: [
+                    {text: "Starmie", correct: false},
+                    {text: "Goldeen", correct: true},
+                    {text: "Shellder", correct: false},
+                    {text: "Horsea", correct: false}
+                ]
+              },
+              {
+                title: "Horsea",
+                choices: [
+                    {text: "Staryu", correct: false},
+                    {text: "Shellder", correct: false},
+                    {text: "Horsea", correct: true},
+                    {text: "Goldeen", correct: false}
+                ]
+              },
+              {
+                title: "Shellder",
+                choices: [
+                    {text: "Horsea", correct: false},
+                    {text: "Goldeen", correct: false},
+                    {text: "Staryu", correct: false},
+                    {text: "Shellder", correct: true}
+                ]
+              },
+              {
+                title: "Staryu",
+                choices: [
+                    {text: "Goldeen", correct: false},
+                    {text: "Staryu", correct: true},
+                    {text: "Shellder", correct: false},
+                    {text: "Horsea", correct: false}
+                ]
+              },
+              {
+                title: "Starmie",
+                choices: [
+                    {text: "Starmie", correct: true},
+                    {text: "Shellder", correct: false},
+                    {text: "Goldeen", correct: false},
+                    {text: "Staryu", correct: false}
+                ]
+              },
           ],
           image_file: "example.jpg",
           points: 300,
