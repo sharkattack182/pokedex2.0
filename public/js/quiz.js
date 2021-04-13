@@ -465,30 +465,50 @@ $(document).ready(() => {
           name: "Volcano Badge",
           quiz: [
             {
-              title: "Growlithe",
-              choices: ["Ponyata", "Growlithe", "Rapidash", "Arcanine"],
-              answer: "B",
-            },
-            {
-              title: "Vulpix",
-              choices: ["Vulpix", "Growlithe", "Ponyata", "Ninetales"],
-              answer: "A",
-            },
-            {
-              title: "Rapidash",
-              choices: ["Arcanine", "Vulpix", "Rapidash", "Growlithe"],
-              answer: "C",
-            },
-            {
-              title: "Ponyata",
-              choices: ["Ponyata", "Ninetales", "Kadabra", "Vulpix"],
-              answer: "A",
-            },
-            {
-              title: "Arcanine",
-              choices: ["Growlithe", "Vulpix", "Arcanine", "Ninetales"],
-              answer: "C",
-            },
+                title: "Growlithe",
+                choices: [
+                    {text: "Vulpix", correct: false},
+                    {text: "Growlithe", correct: true},
+                    {text: "Ponyata", correct: false},
+                    {text: "Rapidash", correct: false}
+                ]
+              },
+              {
+                title: "Vulpix",
+                choices: [
+                    {text: "Growlithe", correct: false},
+                    {text: "Ponyata", correct: false},
+                    {text: "Vulpix", correct: true},
+                    {text: "Rapidash", correct: false}
+                ]
+              },
+              {
+                title: "Rapidash",
+                choices: [
+                    {text: "Arcanine", correct: false},
+                    {text: "Vulpix", correct: false},
+                    {text: "Growlithe", correct: false},
+                    {text: "Rapidash", correct: true}
+                ]
+              },
+              {
+                title: "Ponyata",
+                choices: [
+                    {text: "Vulpix", correct: false},
+                    {text: "Ponyata", correct: true},
+                    {text: "Rapidash", correct: false},
+                    {text: "Arcanine", correct: false}
+                ]
+              },
+              {
+                title: "Arcanine",
+                choices: [
+                    {text: "Arcanine", correct: true},
+                    {text: "Growlithe", correct: false},
+                    {text: "Rapidash", correct: false},
+                    {text: "Ponyata", correct: false}
+                ]
+              },
           ],
     
           image_file: "example.jpg",
