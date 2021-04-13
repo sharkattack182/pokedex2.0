@@ -288,30 +288,50 @@ $(document).ready(() => {
           name: "Rainbow Badge",
           quiz: [
             {
-              title: "Bellsprout",
-              choices: ["Oddish", "Bellsprout", "Bulbasaur", "Exeggcute"],
-              answer: "B",
-            },
-            {
-              title: "Baulbasaur",
-              choices: ["Ivysaur", "Metapod", "Venasaur", "Bulbasaur"],
-              answer: "D",
-            },
-            {
-              title: "Ivysaur",
-              choices: ["Ivysaur", "Metapod", "Venasaur", "Bulbasaur"],
-              answer: "A",
-            },
-            {
-              title: "Exeggcute",
-              choices: ["Oddish", "Bellsprout", "Bulbasaur", "Exeggcute"],
-              answer: "D",
-            },
-            {
-              title: "Gloom",
-              choices: ["Gloom", "Weepingbell", "Oddish", "Venasaur"],
-              answer: "A",
-            },
+                title: "Bellsprout",
+                choices: [
+                    {text: "Baulbasaur", correct: false},
+                    {text: "Bellsprout", correct: true},
+                    {text: "Exeggcute", correct: false},
+                    {text: "Ivysaur", correct: false}
+                ]
+              },
+              {
+                title: "Baulbasaur",
+                choices: [
+                    {text: "Bellsprout", correct: false},
+                    {text: "Exeggcute", correct: false},
+                    {text: "Baulbasaur", correct: true},
+                    {text: "Ivysaur", correct: false}
+                ]
+              },
+              {
+                title: "Ivysaur",
+                choices: [
+                    {text: "Exeggcute", correct: false},
+                    {text: "Baulbasaur", correct: false},
+                    {text: "Bellsprout", correct: false},
+                    {text: "Ivysaur", correct: true}
+                ]
+              },
+              {
+                title: "Exeggcute",
+                choices: [
+                    {text: "Baulbasaur", correct: false},
+                    {text: "Exeggcute", correct: true},
+                    {text: "Ivysaur", correct: false},
+                    {text: "Gloom", correct: false}
+                ]
+              },
+              {
+                title: "Gloom",
+                choices: [
+                    {text: "Gloom", correct: true},
+                    {text: "Bellsprout", correct: false},
+                    {text: "Ivysaur", correct: false},
+                    {text: "Exeggcute", correct: false}
+                ]
+              },
           ],
           image_file: "example.jpg",
           points: 500,
