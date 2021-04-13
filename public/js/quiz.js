@@ -347,30 +347,50 @@ $(document).ready(() => {
           name: "Soul Badge",
           quiz: [
             {
-              title: "Koffing",
-              choices: ["Koffing", "Muk", "Wheezing", "Hypno"],
-              answer: "A",
-            },
-            {
-              title: "Arbok",
-              choices: ["Koffing", "Drowzee", "Arbok", "Muk"],
-              answer: "C",
-            },
-            {
-              title: "Muk",
-              choices: ["Wheezing", "Muk", "Arbok", "Koffing"],
-              answer: "B",
-            },
-            {
-              title: "Hypno",
-              choices: ["Koffing", "Muk", "Wheezing", "Hypno"],
-              answer: "D",
-            },
-            {
-              title: "Weezing",
-              choices: ["Muk", "Weezing", "Hypno", "Kadabra"],
-              answer: "Gloom",
-            },
+                title: "Koffing",
+                choices: [
+                    {text: "Arbok", correct: false},
+                    {text: "Koffing", correct: true},
+                    {text: "Hypno", correct: false},
+                    {text: "Mukr", correct: false}
+                ]
+              },
+              {
+                title: "Arbok",
+                choices: [
+                    {text: "Koffing", correct: false},
+                    {text: "Hypno", correct: false},
+                    {text: "Arbok", correct: true},
+                    {text: "Muk", correct: false}
+                ]
+              },
+              {
+                title: "Muk",
+                choices: [
+                    {text: "Hypno", correct: false},
+                    {text: "Arbok", correct: false},
+                    {text: "Koffing", correct: false},
+                    {text: "Muk", correct: true}
+                ]
+              },
+              {
+                title: "Hypno",
+                choices: [
+                    {text: "Arbok", correct: false},
+                    {text: "Hypno", correct: true},
+                    {text: "Muk", correct: false},
+                    {text: "Weezing", correct: false}
+                ]
+              },
+              {
+                title: "Weezing",
+                choices: [
+                    {text: "Weezing", correct: true},
+                    {text: "Koffing", correct: false},
+                    {text: "Muk", correct: false},
+                    {text: "Hypno", correct: false}
+                ]
+              },
           ],
           image_file: "example.jpg",
           points: 500,
