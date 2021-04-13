@@ -526,30 +526,50 @@ $(document).ready(() => {
           quiz: [
             // Quiz8 Earth Badge
             {
-              title: "Rhyhorn",
-              choices: ["Rydon", "Nidoqueen", "Nidoking", "Rhyhorn"],
-              answer: "D",
-            },
-            {
-              title: "Dugtrio",
-              choices: ["Dugtrio", "Rhyhorn", "Nidoking", "Rydon"],
-              answer: "A",
-            },
-            {
-              title: "Nidoqueen",
-              choices: ["Rydon", "Nidoqueen", "Dugtrio", "Nidoking"],
-              answer: "Bn",
-            },
-            {
-              title: "Nidoking",
-              choices: ["Nidoking", "Dugtrio", "Nidoqueen", "Rydon"],
-              answer: "A",
-            },
-            {
-              title: "Rydon",
-              choices: ["Rhyhorn", "Dugtrio", "Rydon", "Nidoqueen"],
-              answer: "C",
-            },
+                title: "Rhyhorn",
+                choices: [
+                    {text: "Dugtrio", correct: false},
+                    {text: "Rhyhorn", correct: true},
+                    {text: "Nidoking", correct: false},
+                    {text: "Nidoqueen", correct: false}
+                ]
+              },
+              {
+                title: "Dugtrio",
+                choices: [
+                    {text: "Rhyhorn", correct: false},
+                    {text: "Nidoking", correct: false},
+                    {text: "Dugtrio", correct: true},
+                    {text: "Nidoqueen", correct: false}
+                ]
+              },
+              {
+                title: "Nidoqueen",
+                choices: [
+                    {text: "Rydon", correct: false},
+                    {text: "Dugtrio", correct: false},
+                    {text: "Rhyhorn", correct: false},
+                    {text: "Nidoqueen", correct: true}
+                ]
+              },
+              {
+                title: "Nidoking",
+                choices: [
+                    {text: "Dugtrio", correct: false},
+                    {text: "Nidoking", correct: true},
+                    {text: "Nidoqueen", correct: false},
+                    {text: "Rydon", correct: false}
+                ]
+              },
+              {
+                title: "Rydon",
+                choices: [
+                    {text: "Rydon", correct: true},
+                    {text: "Rhyhorn", correct: false},
+                    {text: "Nidoqueen", correct: false},
+                    {text: "Nidoking", correct: false}
+                ]
+              },
           ],
     
           image_file: "example.jpg",
