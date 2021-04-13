@@ -1,4 +1,7 @@
 $(document).ready(() => {
+
+
+   
   $.get("/api/user_data").then((data) => {
     console.log(data);
     console.log(data.id)
@@ -74,6 +77,8 @@ $(document).ready(() => {
         console.log("END OF GAME SCORE: " + score);
         $(".quiz-container").css("display", "none");
 
+        var badgeImg = badges[data.level - 1].image_file;
+        var badgeName = badges[data.level - 1].name;
         console.log(data.points);
         console.log(data.level);
         var addPoints = score * 100 + data.points;
@@ -93,11 +98,22 @@ $(document).ready(() => {
                 
             }
         }).then(result => {
-            
             console.log("user info updated");
             console.log(result);
-            // window.location.replace("/members");
-            
+            Swal.fire({
+                title: 'Sweet!',
+                text: 'You Earned A ' + badgeName + "! You will now be logged out. Log back in for your stats to update!",
+                imageUrl: badgeImg,
+                imageWidth: "auto",
+                imageHeight: 200,
+                imageAlt: 'badge',
+                confirmButtonText: `Ok`
+              })
+
+            // window.location.replace("/members")
+            $(".swal2-confirm").on("click", function() {
+                window.location.replace("/logout")
+            })
             
         });
     }
@@ -156,7 +172,7 @@ $(document).ready(() => {
                     ]
                   },
             ],
-            image_file: "example.jpg",
+            image_file: "imgs/badges/boulder-badge.png",
             points: 300,
             message: "Congratulations on earning your Boulder Badge! You have also earned 300 xP to help in your quest to become a pokemon master!",
             gym: "Pewter City",

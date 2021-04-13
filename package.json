@@ -22,7 +22,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.8.6",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sweetalert2": "^10.16.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
