@@ -123,9 +123,10 @@ module.exports = function(app) {
   });
 
   app.put("/api/user_data", function(req, res) {
+    console.log(req.body)
     db.User.update(
       {
-        points: req.body.points,
+        points: req.body.point,
         level: req.body.level,
       },
       {

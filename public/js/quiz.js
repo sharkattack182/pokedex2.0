@@ -76,7 +76,7 @@ $(document).ready(() => {
 
         console.log(data.points);
         console.log(data.level);
-        var addPoints = score * 100;
+        var addPoints = score * 100 + data.points;
         var newLevel = data.level + 1;
         
 
@@ -90,7 +90,7 @@ $(document).ready(() => {
             },
             error: function(req, err) {
                 console.log(err)
-                // window.location.replace("/members");
+                
             }
         }).then(result => {
             
