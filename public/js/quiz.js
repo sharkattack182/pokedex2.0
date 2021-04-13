@@ -406,30 +406,50 @@ $(document).ready(() => {
           name: "Marsh Badge",
           quiz: [
             {
-              title: "Abra",
-              choices: ["Mr. Mime", "Abra", "Kadabara", "Haunter"],
-              answer: "B",
-            },
-            {
-              title: "Mr. Mime",
-              choices: ["Gastly", "Abra", "Mr. Mime", "Alakazam"],
-              answer: "C",
-            },
-            {
-              title: "Kadabra",
-              choices: ["Mr. Mime", "Abra", "Haunter", "Kadabra"],
-              answer: "D",
-            },
-            {
-              title: "Slowbro",
-              choices: ["Slowbro", "Gastly", "Kadabra", "Slowpoke"],
-              answer: "A",
-            },
-            {
-              title: "Alakazam",
-              choices: ["Slowbro", "Haunter", "Alakazam", "Kadabra"],
-              answer: "C",
-            },
+                title: "Abra",
+                choices: [
+                    {text: "Slowbro", correct: false},
+                    {text: "Abra", correct: true},
+                    {text: "Kadabra", correct: false},
+                    {text: "Mr. Mime", correct: false}
+                ]
+              },
+              {
+                title: "Slowbro",
+                choices: [
+                    {text: "Abra", correct: false},
+                    {text: "Kadabra", correct: false},
+                    {text: "Slowbro", correct: true},
+                    {text: "Mr. Mime", correct: false}
+                ]
+              },
+              {
+                title: "Mr. Mime",
+                choices: [
+                    {text: "Alakazam", correct: false},
+                    {text: "Slowbro", correct: false},
+                    {text: "Abra", correct: false},
+                    {text: "Mr. Mime", correct: true}
+                ]
+              },
+              {
+                title: "Kadabra",
+                choices: [
+                    {text: "Slowbro", correct: false},
+                    {text: "Kadabra", correct: true},
+                    {text: "Mr. Mime", correct: false},
+                    {text: "Alakazam", correct: false}
+                ]
+              },
+              {
+                title: "Alakazam",
+                choices: [
+                    {text: "Alakazam", correct: true},
+                    {text: "Abra", correct: false},
+                    {text: "Mr. Mime", correct: false},
+                    {text: "Kadabra", correct: false}
+                ]
+              },
           ],
           image_file: "example.jpg",
           points: 750,
