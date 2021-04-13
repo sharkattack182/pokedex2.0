@@ -229,30 +229,50 @@ $(document).ready(() => {
           name: "Thunder Badge",
           quiz: [
             {
-              title: "Pikachu",
-              choices: ["Pikachu", "Magnamite", "Electrode", "Voltorb"],
-              answer: "A",
-            },
-            {
-              title: "Voltorb",
-              choices: ["Electrode", "Pikachu", "Voltorb", "Magnamite"],
-              answer: "C",
-            },
-            {
-              title: "Magnamite",
-              choices: ["Magnamite", "Pikachu", "Raichu", "Electrode"],
-              answer: "A",
-            },
-            {
-              title: "Electrode",
-              choices: ["Pikachu", "Voltorb", "Raichu", "Electrode"],
-              answer: "D",
-            },
-            {
-              title: "Raichu",
-              choices: ["Pikachu", "Raichu", "Voltorb", "Magnamite"],
-              answer: "B",
-            },
+                title: "Pikachu",
+                choices: [
+                    {text: "Voltorb", correct: false},
+                    {text: "Pikachu", correct: true},
+                    {text: "Electrode", correct: false},
+                    {text: "Magnamite", correct: false}
+                ]
+              },
+              {
+                title: "Voltorb",
+                choices: [
+                    {text: "Pikachu", correct: false},
+                    {text: "Electrode", correct: false},
+                    {text: "Voltorb", correct: true},
+                    {text: "Magnamite", correct: false}
+                ]
+              },
+              {
+                title: "Magnamite",
+                choices: [
+                    {text: "Electrode", correct: false},
+                    {text: "Voltorb", correct: false},
+                    {text: "Pikachu", correct: false},
+                    {text: "Magnamite", correct: true}
+                ]
+              },
+              {
+                title: "Electrode",
+                choices: [
+                    {text: "Voltorb", correct: false},
+                    {text: "Electrode", correct: true},
+                    {text: "Magnamite", correct: false},
+                    {text: "Raichu", correct: false}
+                ]
+              },
+              {
+                title: "Raichu",
+                choices: [
+                    {text: "Raichu", correct: true},
+                    {text: "Pikachu", correct: false},
+                    {text: "Magnamite", correct: false},
+                    {text: "Electrode", correct: false}
+                ]
+              },
           ],
           image_file: "example.jpg",
           points: 300,
