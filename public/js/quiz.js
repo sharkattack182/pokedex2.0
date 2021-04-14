@@ -39,7 +39,10 @@ $(document).ready(() => {
     }
 
     function showQuestion(question) {
-        $(".img").text(question.title);
+        var qImg = $("<img>");
+        qImg.attr("src", question.img);
+        qImg.attr("class", "question-img")
+        $(".img").append(qImg)
         question.choices.forEach(answer => {
             const button = $("<div>");
             button.text(answer.text);
@@ -62,12 +65,14 @@ $(document).ready(() => {
             currentQuestionIndex ++
             console.log(score);
             $(".choices").empty();
+            $(".img").empty()
             setNextQuestion()
         } else {
             score +=0;
             currentQuestionIndex ++
             console.log(score);
             $(".choices").empty();
+            $(".img").empty()
             setNextQuestion()
         }
 
@@ -133,7 +138,8 @@ $(document).ready(() => {
                         {text: "Digglet", correct: true},
                         {text: "Hypno", correct: false},
                         {text: "Onix", correct: false}
-                    ]
+                    ],
+                    img: "imgs/WTP/Digglet.png"
                   },
                   {
                     title: "Sandshrew",
@@ -142,7 +148,8 @@ $(document).ready(() => {
                         {text: "Digglet", correct: false},
                         {text: "Sandshrew", correct: true},
                         {text: "Geodude", correct: false}
-                    ]
+                    ],
+                    img: "imgs/WTP/Sandshrew.png"
                   },
                   {
                     title: "Geodude",
@@ -151,7 +158,8 @@ $(document).ready(() => {
                         {text: "Slowbro", correct: false},
                         {text: "Sandshrew", correct: false},
                         {text: "Geodude", correct: true}
-                    ]
+                    ],
+                    img: "imgs/WTP/Geodude.png"
                   },
                   {
                     title: "Onix",
@@ -160,7 +168,8 @@ $(document).ready(() => {
                         {text: "Onix", correct: true},
                         {text: "Sandshrew", correct: false},
                         {text: "Geodude", correct: false}
-                    ]
+                    ],
+                    img: "imgs/WTP/Onix.png"
                   },
                   {
                     title: "Cubone",
@@ -169,7 +178,8 @@ $(document).ready(() => {
                         {text: "Digglet", correct: false},
                         {text: "Sandshrew", correct: false},
                         {text: "Geodude", correct: false}
-                    ]
+                    ],
+                    img: "imgs/WTP/Cubone.png"
                   },
             ],
             image_file: "imgs/badges/boulder-badge.png",

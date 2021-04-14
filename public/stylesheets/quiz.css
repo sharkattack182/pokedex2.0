@@ -118,3 +118,8 @@ body {
     font-family: 'VT323', monospace;
     color: rgb(8, 8, 168)
 }
+
+.question-img {
+  max-width: 80%;
+  height: auto;
+}
