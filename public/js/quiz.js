@@ -231,7 +231,7 @@ $(document).ready(() => {
                 ]
               },
           ],
-          image_file: "example.jpg",
+          image_file: "imgs/badges/cascade-badge.png",
           points: 300,
           message:
             "Congratulations on earning your Cascade Badge! You have also earned 300 xP to help in your quest to become a pokemon master!",
@@ -290,7 +290,7 @@ $(document).ready(() => {
                 ]
               },
           ],
-          image_file: "example.jpg",
+          image_file: "imgs/badges/thunder-badge.png",
           points: 300,
           message:
             "Congratulations on earning your Thunder Badge! You have also earned 300 xP to help in your quest to become a pokemon master!",
@@ -349,7 +349,7 @@ $(document).ready(() => {
                 ]
               },
           ],
-          image_file: "example.jpg",
+          image_file: "imgs/badges/rainbow-badge.png",
           points: 500,
           message:
             "Congratulations on earning your Rainbow Badge! You have also earned 500 xP to help in your quest to become a pokemon master!",
@@ -408,7 +408,7 @@ $(document).ready(() => {
                 ]
               },
           ],
-          image_file: "example.jpg",
+          image_file: "imgs/badges/soul-badge.png",
           points: 500,
           message:
             "Congratulations on earning your Soul Badge! You have also earned 500 xP to help in your quest to become a pokemon master!",
@@ -467,7 +467,7 @@ $(document).ready(() => {
                 ]
               },
           ],
-          image_file: "example.jpg",
+          image_file: "imgs/badges/marsh-badge.png",
           points: 750,
           message:
             "Congratulations on earning your Marsh Badge! You have also earned 750 xP to help in your quest to become a pokemon master!",
@@ -527,7 +527,7 @@ $(document).ready(() => {
               },
           ],
     
-          image_file: "example.jpg",
+          image_file: "imgs/badges/volcano-badge.png",
           points: 750,
           message:
             "Congratulations on earning your Volcano Badge! You have also earned 750 xP to help in your quest to become a pokemon master!",
@@ -588,7 +588,7 @@ $(document).ready(() => {
               },
           ],
     
-          image_file: "example.jpg",
+          image_file: "imgs/badges/earth-badge.png",
           points: 1000,
           message:
             "Congratulations on earning your Earth Badge! You have also earned 1000 xP to help in your quest to become a pokemon master!",

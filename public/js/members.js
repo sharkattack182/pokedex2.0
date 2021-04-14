@@ -10,8 +10,59 @@ $(document).ready(() => {
     $(".last-name").text(data.last);
     $(".email").text(data.email);
     $(".xp").text(data.points);
+
+
+  let badgesArr = [
+    "imgs/badges/boulder-badge.png",
+    "imgs/badges/cascade-badge.png",
+    "imgs/badges/thunder-badge.png",
+    "imgs/badges/rainbow-badge.png",
+    "imgs/badges/soul-badge.png",
+    "imgs/badges/marsh-badge.png",
+    "imgs/badges/volcano-badge.png",
+    "imgs/badges/earth-badge.png"
+  ];
+
+  for (let i = 0; i < data.level -1; i++) {
+    const element = badgesArr[i];
+    console.log(element);
+
+    const newDiv = $("<div>");
+    newDiv.attr("class", "col-3");
+    let newImg = $("<img>");
+    newImg.attr("class", "gym-badge");
+    newImg.attr("src", element);
+    newDiv.append(newImg);
+    if(i <= 4) {
+      $(".badge-row1").append(newDiv)
+    } else {
+      $(".badge-row2").append(newDiv)
+    }
+
+  }
+  // let level = data.level;
+  // console.log(level);
+  // if(level > 1) {
+  //  for (let i = 2; i < level + 2; i++) {
+  //   const element = badgesArr[i];
+  //   console.log(element)
+    // // const newDiv = $("<div>");
+    // // newDiv.attr("class", "col-3");
+    // // let newImg = $("<img>");
+    // // newImg.attr("class", "gym-badge");
+    // // newImg.attr("src", element);
+    // // newDiv.append(newImg);
+    // if(i <= 4) {
+    //   $(".badge-row1").append(newDiv)
+    // } else {
+    //   $(".badge-row2").append(newDiv)
+    // }
+  // } 
+  // }
   
   });
+
+  
 
 
 
