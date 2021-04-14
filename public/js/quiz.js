@@ -202,7 +202,8 @@ $(document).ready(() => {
                     {text: "Goldeen", correct: true},
                     {text: "Shellder", correct: false},
                     {text: "Horsea", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Goldeen.png"
               },
               {
                 title: "Horsea",
@@ -211,7 +212,8 @@ $(document).ready(() => {
                     {text: "Shellder", correct: false},
                     {text: "Horsea", correct: true},
                     {text: "Goldeen", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Horsea.png"
               },
               {
                 title: "Shellder",
@@ -220,7 +222,8 @@ $(document).ready(() => {
                     {text: "Goldeen", correct: false},
                     {text: "Staryu", correct: false},
                     {text: "Shellder", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Shellder.png"
               },
               {
                 title: "Staryu",
@@ -229,7 +232,8 @@ $(document).ready(() => {
                     {text: "Staryu", correct: true},
                     {text: "Shellder", correct: false},
                     {text: "Horsea", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Staryu.png"
               },
               {
                 title: "Starmie",
@@ -238,7 +242,8 @@ $(document).ready(() => {
                     {text: "Shellder", correct: false},
                     {text: "Goldeen", correct: false},
                     {text: "Staryu", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Starmie.png"
               },
           ],
           image_file: "imgs/badges/cascade-badge.png",
@@ -261,7 +266,8 @@ $(document).ready(() => {
                     {text: "Pikachu", correct: true},
                     {text: "Electrode", correct: false},
                     {text: "Magnamite", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Pikachu.png"
               },
               {
                 title: "Voltorb",
@@ -270,7 +276,8 @@ $(document).ready(() => {
                     {text: "Electrode", correct: false},
                     {text: "Voltorb", correct: true},
                     {text: "Magnamite", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Voltorb.png"
               },
               {
                 title: "Magnamite",
@@ -279,7 +286,8 @@ $(document).ready(() => {
                     {text: "Voltorb", correct: false},
                     {text: "Pikachu", correct: false},
                     {text: "Magnamite", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Magnamite.png"
               },
               {
                 title: "Electrode",
@@ -288,7 +296,8 @@ $(document).ready(() => {
                     {text: "Electrode", correct: true},
                     {text: "Magnamite", correct: false},
                     {text: "Raichu", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Electrode.png"
               },
               {
                 title: "Raichu",
@@ -297,7 +306,8 @@ $(document).ready(() => {
                     {text: "Pikachu", correct: false},
                     {text: "Magnamite", correct: false},
                     {text: "Electrode", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Raichu.png"
               },
           ],
           image_file: "imgs/badges/thunder-badge.png",
@@ -320,7 +330,8 @@ $(document).ready(() => {
                     {text: "Bellsprout", correct: true},
                     {text: "Exeggcute", correct: false},
                     {text: "Ivysaur", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Bellsprout.png"
               },
               {
                 title: "Baulbasaur",
@@ -329,7 +340,8 @@ $(document).ready(() => {
                     {text: "Exeggcute", correct: false},
                     {text: "Baulbasaur", correct: true},
                     {text: "Ivysaur", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Baulbasaur.png"
               },
               {
                 title: "Ivysaur",
@@ -338,7 +350,8 @@ $(document).ready(() => {
                     {text: "Baulbasaur", correct: false},
                     {text: "Bellsprout", correct: false},
                     {text: "Ivysaur", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Ivysaur.png"
               },
               {
                 title: "Exeggcute",
@@ -347,7 +360,8 @@ $(document).ready(() => {
                     {text: "Exeggcute", correct: true},
                     {text: "Ivysaur", correct: false},
                     {text: "Gloom", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Exeggcute.png"
               },
               {
                 title: "Gloom",
@@ -356,7 +370,8 @@ $(document).ready(() => {
                     {text: "Bellsprout", correct: false},
                     {text: "Ivysaur", correct: false},
                     {text: "Exeggcute", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Gloom.png"
               },
           ],
           image_file: "imgs/badges/rainbow-badge.png",
@@ -379,7 +394,8 @@ $(document).ready(() => {
                     {text: "Koffing", correct: true},
                     {text: "Hypno", correct: false},
                     {text: "Mukr", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Koffing.png"
               },
               {
                 title: "Arbok",
@@ -388,7 +404,8 @@ $(document).ready(() => {
                     {text: "Hypno", correct: false},
                     {text: "Arbok", correct: true},
                     {text: "Muk", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Arbok.png"
               },
               {
                 title: "Muk",
@@ -397,7 +414,8 @@ $(document).ready(() => {
                     {text: "Arbok", correct: false},
                     {text: "Koffing", correct: false},
                     {text: "Muk", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Muk.png"
               },
               {
                 title: "Hypno",
@@ -406,7 +424,8 @@ $(document).ready(() => {
                     {text: "Hypno", correct: true},
                     {text: "Muk", correct: false},
                     {text: "Weezing", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Hypno.png"
               },
               {
                 title: "Weezing",
@@ -415,7 +434,8 @@ $(document).ready(() => {
                     {text: "Koffing", correct: false},
                     {text: "Muk", correct: false},
                     {text: "Hypno", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Weezing.png"
               },
           ],
           image_file: "imgs/badges/soul-badge.png",
@@ -438,7 +458,8 @@ $(document).ready(() => {
                     {text: "Abra", correct: true},
                     {text: "Kadabra", correct: false},
                     {text: "Mr. Mime", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Abra.png"
               },
               {
                 title: "Slowbro",
@@ -447,7 +468,8 @@ $(document).ready(() => {
                     {text: "Kadabra", correct: false},
                     {text: "Slowbro", correct: true},
                     {text: "Mr. Mime", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Slowbro.png"
               },
               {
                 title: "Mr. Mime",
@@ -456,7 +478,8 @@ $(document).ready(() => {
                     {text: "Slowbro", correct: false},
                     {text: "Abra", correct: false},
                     {text: "Mr. Mime", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Mrmime.png"
               },
               {
                 title: "Kadabra",
@@ -465,7 +488,8 @@ $(document).ready(() => {
                     {text: "Kadabra", correct: true},
                     {text: "Mr. Mime", correct: false},
                     {text: "Alakazam", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Kadabra.png"
               },
               {
                 title: "Alakazam",
@@ -474,7 +498,8 @@ $(document).ready(() => {
                     {text: "Abra", correct: false},
                     {text: "Mr. Mime", correct: false},
                     {text: "Kadabra", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Alakazam.png"
               },
           ],
           image_file: "imgs/badges/marsh-badge.png",
@@ -497,7 +522,8 @@ $(document).ready(() => {
                     {text: "Growlithe", correct: true},
                     {text: "Ponyata", correct: false},
                     {text: "Rapidash", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Growlithe.png"
               },
               {
                 title: "Vulpix",
@@ -506,7 +532,8 @@ $(document).ready(() => {
                     {text: "Ponyata", correct: false},
                     {text: "Vulpix", correct: true},
                     {text: "Rapidash", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Vulpix.png"
               },
               {
                 title: "Rapidash",
@@ -515,7 +542,8 @@ $(document).ready(() => {
                     {text: "Vulpix", correct: false},
                     {text: "Growlithe", correct: false},
                     {text: "Rapidash", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Rapidash.png"
               },
               {
                 title: "Ponyata",
@@ -524,7 +552,8 @@ $(document).ready(() => {
                     {text: "Ponyata", correct: true},
                     {text: "Rapidash", correct: false},
                     {text: "Arcanine", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Ponyata.png"
               },
               {
                 title: "Arcanine",
@@ -533,7 +562,8 @@ $(document).ready(() => {
                     {text: "Growlithe", correct: false},
                     {text: "Rapidash", correct: false},
                     {text: "Ponyata", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Arcanine.png"
               },
           ],
     
@@ -558,7 +588,8 @@ $(document).ready(() => {
                     {text: "Rhyhorn", correct: true},
                     {text: "Nidoking", correct: false},
                     {text: "Nidoqueen", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Rhyhorn.png"
               },
               {
                 title: "Dugtrio",
@@ -567,7 +598,8 @@ $(document).ready(() => {
                     {text: "Nidoking", correct: false},
                     {text: "Dugtrio", correct: true},
                     {text: "Nidoqueen", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Dugtrio.png"
               },
               {
                 title: "Nidoqueen",
@@ -576,7 +608,8 @@ $(document).ready(() => {
                     {text: "Dugtrio", correct: false},
                     {text: "Rhyhorn", correct: false},
                     {text: "Nidoqueen", correct: true}
-                ]
+                ],
+                img: "imgs/WTP/Nidoqueen.png"
               },
               {
                 title: "Nidoking",
@@ -585,7 +618,8 @@ $(document).ready(() => {
                     {text: "Nidoking", correct: true},
                     {text: "Nidoqueen", correct: false},
                     {text: "Rydon", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Nidoking.png"
               },
               {
                 title: "Rydon",
@@ -594,7 +628,8 @@ $(document).ready(() => {
                     {text: "Rhyhorn", correct: false},
                     {text: "Nidoqueen", correct: false},
                     {text: "Nidoking", correct: false}
-                ]
+                ],
+                img: "imgs/WTP/Rydon.png"
               },
           ],
     

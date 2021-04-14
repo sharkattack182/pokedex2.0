@@ -33,7 +33,7 @@ $(document).ready(() => {
     newImg.attr("class", "gym-badge");
     newImg.attr("src", element);
     newDiv.append(newImg);
-    if(i <= 4) {
+    if(i <= 3) {
       $(".badge-row1").append(newDiv)
     } else {
       $(".badge-row2").append(newDiv)
