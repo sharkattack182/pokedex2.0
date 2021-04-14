@@ -241,7 +241,8 @@ h4 {
     .user-info {
         max-width: 45vw;
         position: absolute;
-        left: 8em
+        left: 8em;
+        min-height: 430px;
     }
 
     .user-info-img {
@@ -251,10 +252,11 @@ h4 {
     }
 
     .badges {
-        max-width: 55vw;
+        width: 55vw;
         position: absolute;
         right: 6em;
-        margin-top: 0
+        margin-top: 0;
+        min-height: 430px;
     }
 
     .gym-badge {
@@ -263,5 +265,15 @@ h4 {
 
     .col-3 {
         text-align: center;
+    }
+
+    .user-pokedex {
+        margin-top: 32em;
+        text-align: center;
+    }
+
+    .starters-logo {
+        margin-left: autp;
+        margin-right: auto;
     }
 }
