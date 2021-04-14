@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
+}
+
+.pokeball-logo {
+    margin-left: 1em
+}
+
+.two-mini {
+    max-height: 35px;
+    
+  }
+  
+
+#navbarNav ul {
+    text-align: right;
+    margin-right: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 10000;
+  }
+
+
+  .container {
+    max-width: 80vw;
+    background-color: rgb(247, 247, 247);
+    margin: 8em auto 0;
+    border-radius: 1em;
+    padding: 4em 1em;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+}
+
+.login-img {
+    max-width: 90%;
+    margin: -8em auto 0
+}
+
+.img-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button, .log {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    font-family: 'VT323', monospace;
+  }
+  
+  .button button {
+    font-size: 1em;
+    background-color: rgb(55, 55, 255);
+    color: yellow;
+  }
+
+  .form-row form {
+    font-size: 1.5em;
+    font-family: 'VT323', monospace;
+  }

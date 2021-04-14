@@ -1,5 +1,6 @@
 body {
-    background-color: #f33b4d;
+    /* background-color: #f33b4d; */
+    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
 }
 
 .pokeball-logo {
@@ -51,7 +52,8 @@ nav {
 
 .container {
     padding-bottom: 2em;
-    background-color: #f33b4d;
+    padding-top: 1em;
+    /* background-color: #f33b4d; */
 }
 
 .user-info-img {
@@ -61,7 +63,7 @@ nav {
 
 .user-info , .user-pokedex {
     max-width: 80vw;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     margin: 0 auto;
     border-radius: 1em;
     padding: 4em 1em 2em;
@@ -113,7 +115,7 @@ h4 {
 
 .badges {
     max-width: 80vw;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     margin: 2em auto;
     border-radius: 1em;
     padding: 1em 1em 2em;
