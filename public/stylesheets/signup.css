@@ -126,3 +126,19 @@ nav {
   }
 
   }
+
+
+  @media only screen and (min-width: 1200px) {
+  
+    .misty {
+      display: inline-block;
+      position: absolute;
+      height: 110%;
+      left: 40em;
+      top: -3em
+    }
+
+    .form-row {
+      margin: 3em auto
+    }
+  }

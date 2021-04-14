@@ -46,7 +46,7 @@ nav {
     background-color: rgb(185, 185, 185);
     margin: 0 auto 0;
     border-radius: 1em;
-    padding: 4em 1em 2em;
+    padding: 0 1em 2em;
 
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 
     0 2px 2px rgba(0,0,0,0.12), 
@@ -57,7 +57,8 @@ nav {
 
 .poke-img {
     max-width: 100%;
-    margin: 0 auto 0
+    margin: 3em auto 0
+    
 }
 
 .name-container {
@@ -66,7 +67,8 @@ nav {
 .pokemon-name {
     text-transform: uppercase;
     font-size: 3em;
-    margin: 0 auto -4em;
+    margin: -2em auto 1em;
+    padding-bottom: 2em;
     font-family: 'VT323', monospace;
     color: white;
     width: 7vw;
@@ -126,10 +128,131 @@ nav {
 }
 
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      
+  body {
+    width:100%;
+    overflow-x:hidden;
+  }
+  
+    .pokeball-logo {
+      margin-left: 5em
+  }
+  
+  
+  #navbarNav ul {
+    text-align: right;
+    margin-right: 6em;
+    margin-left: auto;
+  }
+
+  .pokedex-screen { 
+    margin-top: 3em;
+  }
+
+  .type-div {
+      width: 70%;
+    border-radius: 1em;
+    margin: .5em auto;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.pokemon-bio-container {
+    display: flex;
+    margin: 1em 5em
+}
+
+.pokemon-bio {
+
+max-width: 25vw;
+margin: 1em auto;
+font-size: 1.5em;
+}
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    .pokeball-logo {
+        margin-left: 6em
+    }
+    
+    #navbarNav ul {
+      text-align: right;
+      margin-right: 6em;
+      margin-left: auto;
+    }
+
+    .pokedex-screen {
+        max-width: 40vw;
+        margin: 4em 6em 0 auto;
+    }
+
+    .type-container {
+        width: 30vw;
+        float: left;
+        position: absolute;
+        top: 7em;
+        left: 15em
+    }
+    
+
+    .pokemon-bio-container {
+        position: absolute;
+        top: 16em;
+        max-width: 40vw;
+        left: 10em
+    }
+
+
+    .pokemon-bio {
+        font-size: 1em;
+    }
+  }
 
 
 
 
+
+  @media only screen and (min-width: 1700px) {
+    .pokeball-logo {
+        margin-left: 10em
+    }
+    
+    #navbarNav ul {
+      text-align: right;
+      margin-right: 10em;
+      margin-left: auto;
+    }
+
+    .pokedex-screen {
+        max-width: 35vw;
+        margin: 8em 10em 0 auto;
+    }
+
+    .type-container {
+        width: 30vw;
+        float: left;
+        position: absolute;
+        top: 10em;
+        left: 22em
+    }
+    
+
+    .pokemon-bio-container {
+        position: absolute;
+        top: 20em;
+        max-width: 35vw;
+        left: 20em
+    }
+
+
+    .pokemon-bio {
+        font-size: 1em;
+    }
+  }
 
 
 
