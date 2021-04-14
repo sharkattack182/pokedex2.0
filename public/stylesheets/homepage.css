@@ -2,7 +2,6 @@ body {
   width:100%;
   overflow-x:hidden;
   overflow-y: visible;
-  padding-top: 60px;
   background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
 }
 
@@ -48,7 +47,7 @@ body {
   padding: 2em auto 0;
 }
 .pokedex {
-  margin-top: 1em
+  margin-top: 5em
 }
 
 .two {
@@ -88,7 +87,7 @@ body {
   max-width: 80%;
   background-color: white;
   text-align: center;
-  margin: 0 auto 0;
+  margin: 4em auto 0;
   padding: 12em 0 0;
   border-radius: 2em;
 
@@ -136,8 +135,7 @@ body {
     min-height: 100vh;
     width: 100vw;
     text-align: center;
-    padding-top: 4em;
-    padding-bottom: 2em;
+    padding-top: 2em;
     /* margin-top: 2em; */
     overflow: hidden;
     background-color: rgb(255, 229, 124);
@@ -287,8 +285,6 @@ body {
     text-align: center;
     background-color: rgb(153, 255, 86);
     overflow-x: hidden;
-    padding-top: 5em;
-    padding-bottom: 3em;
     overflow-y: hidden;
 
     background: linear-gradient(rgb(153, 255, 86), rgb(62, 155, 0));
@@ -406,7 +402,7 @@ body {
   
   .logo {
     min-width: 75vw;
-    margin: 0 0 0 -0.4em;
+    margin: 3em 0 0 -0.4em;
     padding: 0;
   }
   .two {
@@ -416,7 +412,7 @@ body {
   }
 
   .landing-content {
-    top: 12em
+    top: 15em
   }
 
   .trainer {
@@ -446,9 +442,13 @@ body {
 
   /* HOW IT WORKS */
 
+  .how-it-works {
+    padding-top: 0;
+  }
+
   .worx {
     width: 90vw;
-    margin: 5em auto 2em
+    margin: 2em auto 2em
   }
   .text-container {
     padding: 3em 2em 4em 2em
@@ -510,6 +510,8 @@ margin-left: -4em
 }
 
 .xp-section {
+  padding-top: 0;
+  padding-bottom: 0;
   overflow-x: hidden;
   overflow-y: inherit;
 }
@@ -666,6 +668,116 @@ margin-left: -4em
 .about-text {
   max-width: 60%;
   margin-top: 12em;
+}
+
+.social-icons {
+  max-width: 50%;
+  margin: 0 auto
+}
+
+}
+
+
+
+@media only screen and (min-width: 1500px) {
+
+  .pokeball-logo {
+    margin-left: 10em
+}
+
+#navbarNav ul {
+  text-align: right;
+  margin-right: 10em;
+  margin-left: auto;
+}
+
+.pokedex {
+  width: 35vw;
+  margin-bottom: -3em;
+}
+.two {
+  max-height: none;
+  min-width: 10vw;
+}
+
+.logo-container {
+  margin-left: 5em;
+}
+
+.landing-content {
+  width: 58%;
+  margin-top: 14em;
+}
+
+
+.landing-content p {
+  width: 90%;
+  margin: 1em auto .5em;
+  font-size: 1.8em;
+  color: #ffffff;
+  font-family: 'Gochi Hand', cursive;
+  text-transform: uppercase;
+
+}
+
+.view, .sign {
+  font-size: 2.2em;
+}
+
+
+.how-it-works img {
+  width: 40vw;
+}
+
+.text-container {
+  max-width: 35vw;
+  margin: 1em auto 1em 17em;
+  font-size: 1.5em;
+}
+.worx {
+  margin-top: 6em;
+  margin-left: 7em;
+}
+
+.pokeballs {
+  max-width: 50vw;
+  margin: 5em auto 3em 26em;
+}
+
+.pokeballs h3 {
+  margin-left: -12em
+}
+
+
+
+
+.xp-section {
+  height: 100vh;
+  
+}
+.xp {
+  width: 25vw
+}
+
+.xp-container {
+  width: 60%;
+  margin-left: auto;
+  margin-top: 2em;
+  margin-right: 2.7em;
+  font-size: 1.4em;
+}
+
+.venusaur {
+  margin: -30em auto 2em;
+
+}
+
+
+
+.about-text {
+  max-width: 60%;
+  margin-top: 6em;
+  font-size: 2em;
 }
 
 .social-icons {
