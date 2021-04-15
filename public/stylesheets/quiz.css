@@ -195,7 +195,37 @@ body {
   font-size: 1.3em;
 }
 
+.quiz-content, .quiz-question{
+  background-color: rgb(255, 255, 255);
+  max-width: 60vw;
+  margin: 2em auto;
+  padding: 1.5em 1em;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1.5em;
+}
 
+.quiz-content h1 {
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+}
+
+
+.quiz-question {
+  margin: .5em auto;
+  padding: .5em;
+  max-width: 50vw;
+  font-size: 1em;
+  background-color: yellow;
+  font-family: 'VT323', monospace;
+  color: rgb(8, 8, 168)
+}
+
+.question-img {
+max-width: 80%;
+height: auto;
+max-height: 200px;
+}
 
 
 }
@@ -231,6 +261,9 @@ body {
   font-size: 1.5em;
 }
 
+.quiz-content {
+  min-height: 600px;
+}
 .quiz-content h1 {
   font-family: 'VT323', monospace;
   font-size: 2em;
