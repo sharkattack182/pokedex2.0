@@ -23,6 +23,19 @@ $(document).ready(() => {
     "imgs/badges/earth-badge.png"
   ];
 
+  let greyBadgesArr = [
+    "imgs/badges/boulder-badge-grey.png",
+    "imgs/badges/cascade-badge-grey.png",
+    "imgs/badges/thunder-badge-grey.png",
+    "imgs/badges/rainbow-badge-grey.png",
+    "imgs/badges/soul-badge-grey.png",
+    "imgs/badges/marsh-badge-grey.png",
+    "imgs/badges/volcano-badge-grey.png",
+    "imgs/badges/earth-badge-grey.png"
+  ];
+
+
+
   for (let i = 0; i < data.level -1; i++) {
     const element = badgesArr[i];
     console.log(element);
@@ -39,6 +52,26 @@ $(document).ready(() => {
       $(".badge-row2").append(newDiv)
     }
 
+  }
+
+  if(data.level < 8) {
+    for (let i = data.level - 1; i < greyBadgesArr.length; i++) {
+      const element = greyBadgesArr[i];
+      const newDiv = $("<div>");
+      newDiv.attr("class", "col-3");
+      let newImg = $("<img>");
+      newImg.attr("class", "gym-badge");
+      newImg.attr("src", element);
+      newDiv.css("opacity", "50%")
+      newDiv.append(newImg);
+      
+
+      if(i <= 3) {
+        $(".badge-row1").append(newDiv)
+      } else {
+        $(".badge-row2").append(newDiv)
+      }
+    }
   }
   // let level = data.level;
   // console.log(level);

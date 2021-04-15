@@ -174,7 +174,6 @@ font-size: 1.5em;
 
 
 @media only screen and (min-width: 1200px) {
-
     .pokeball-logo {
         margin-left: 6em
     }
@@ -185,7 +184,16 @@ font-size: 1.5em;
       margin-left: auto;
     }
 
-    .pokedex-screen {
+
+    
+.container-flex {
+    padding: 4em 0 2em;
+    margin: 1em auto;
+    height: fit-content;
+    width: 80vw;
+    text-align: center;
+}
+    /* .pokedex-screen {
         max-width: 40vw;
         margin: 4em 6em 0 auto;
     }
@@ -209,6 +217,39 @@ font-size: 1.5em;
 
     .pokemon-bio {
         font-size: 1em;
+    } */
+
+    .pokedex-screen { 
+        margin-top: 3em;
+        max-width: 70%;
+      }
+
+    .pokemon-bio-container {
+        display: flex;
+        margin: 1em 5em
+    }
+    
+    .pokemon-bio {
+    
+    max-width: 30%;
+    margin: 1em auto;
+    font-size: 1.2em;
+    }
+
+    .type-container {
+        max-width: 70%;
+    }
+
+    .add-button {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0 2em 2em auto;
+        padding: 1em;
+        border-radius: 50%;
+        font-size: 1em;
+        height: 100px;
+        width: 100px
     }
 
   }
@@ -228,7 +269,27 @@ font-size: 1.5em;
       margin-left: auto;
     }
 
-    .pokedex-screen {
+
+    .pokemon-bio-container {
+        display: flex;
+        margin: 1em auto;
+        max-width: 60vw;
+    }
+
+    .add-button {
+        width: 55%;
+        background-color: rgb(122, 198, 233);
+        font-size: 1.5em;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 1em;
+        left: 0;
+        right: 0;
+        border-radius: .3em;
+        height: fit-content;
+        padding: .5em
+    }
+    /* .pokedex-screen {
         max-width: 35vw;
         margin: 8em 10em 0 auto;
     }
@@ -252,9 +313,27 @@ font-size: 1.5em;
 
     .pokemon-bio {
         font-size: 1em;
-    }
+    } */
+
+    
+    .pokemon-bio {
+    
+        max-width: 20%;
+        margin: 1em auto;
+        font-size: 1.5em;
+        }
 
 
+        .pokedex-screen { 
+            min-height: 400px;
+            margin-top: 3em;
+            max-width: 70%;
+          }
+
+          .poke-img {
+              min-height: 300px;
+          }
+    
   }
 
 

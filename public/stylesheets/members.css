@@ -252,10 +252,10 @@ h4 {
         margin: -4em auto 1em
     }
 
-    .badges {
+    .badges  {
         width: 55vw;
         position: absolute;
-        right: 6em;
+        right: 9em;
         margin-top: 0;
         min-height: 430px;
     }
@@ -271,10 +271,93 @@ h4 {
     .user-pokedex {
         margin-top: 32em;
         text-align: center;
+        width: 55vw;
+        position: absolute;
+        right: 9em;
+        border-radius: 1em 1em 0 0;
+        padding-bottom: 5em;
     }
 
     .starters-logo {
         margin-left: autp;
         margin-right: auto;
     }
+
+    .container {
+        padding-bottom: 5em;
+    }
+
+    .pokedex-entry {
+    
+        margin: 1em auto 0
+    }
+
+    .poke-img {
+        height: 150px
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+
+    .pokeball-logo {
+        margin-left: 10em
+    }
+    
+    
+    #navbarNav ul {
+        text-align: right;
+        margin-right: 10em;
+        margin-left: auto;
+    }
+
+
+    
+    .badges {
+
+        right: 11em;
+
+    }
+
+
+    .user-info {
+
+        left: 14em;
+
+    }
+
+
+    .user-pokedex {
+        max-width: 80vw;
+        background-color: rgb(247, 247, 247);
+        margin: 34em 1.8em 0 auto;
+        border-radius: 1em;
+        padding: 4em 1em 2em;
+
+    
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.452), 
+        0 2px 2px rgba(0,0,0,0.12), 
+        0 4px 4px rgba(0,0,0,0.12), 
+        0 8px 8px rgba(0,0,0,0.12),
+        0 16px 16px rgba(0,0,0,0.12);
+    }
+
+
+    .starters-logo {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10em;
+    }
+
+
+    .gym-badge {
+        max-width: 35%;
+    }
+
+    .poke-img {
+        height: 200px
+    }
+
+    
+
 }

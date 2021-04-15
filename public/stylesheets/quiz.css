@@ -123,3 +123,133 @@ body {
   max-width: 80%;
   height: auto;
 }
+
+.large-logo {
+  display: none
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .pokeball-logo {
+    margin-left: 4.8em
+}
+
+#navbarNav ul {
+  text-align: right;
+  margin-right: 6em;
+  margin-left: auto
+}
+
+
+.mini-logo {
+  display: none;
+}
+
+
+.large-logo {
+  display: inline
+}
+
+
+
+.welcome, .take-test {
+  max-width: 70%;
+}
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+  .pokeball-logo {
+    margin-left: 6em
+}
+
+#navbarNav ul {
+    text-align: right;
+    margin-right: 6em;
+    margin-left: auto;
+}
+
+
+.mini-logo {
+  display: none;
+}
+
+
+
+.large-logo {
+  display: inline;
+  height: 30vh
+}
+
+
+.welcome h1 {
+  font-size: 2em;
+
+}
+
+.welcome p {
+  font-family: 'VT323', monospace;
+  font-size: 1.3em;
+}
+
+
+
+
+}
+
+
+
+@media only screen and (min-width: 1600px) {
+
+  .pokeball-logo {
+    margin-left: 10em
+}
+
+#navbarNav ul {
+    text-align: right;
+    margin-right: 10em;
+    margin-left: auto;
+}
+
+
+.welcome, .take-test {
+  max-width: 60%;
+}
+
+
+
+.quiz-content, .quiz-question{
+  background-color: rgb(255, 255, 255);
+  max-width: 60vw;
+  margin: 2em auto;
+  padding: 2em 1em;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.quiz-content h1 {
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+}
+
+
+.quiz-question {
+  margin: .5em auto;
+  padding: .5em;
+  max-width: 50vw;
+  font-size: 1.5em;
+  background-color: yellow;
+  font-family: 'VT323', monospace;
+  color: rgb(8, 8, 168)
+}
+
+.question-img {
+max-width: 80%;
+height: auto;
+max-height: 400px;
+}
+}

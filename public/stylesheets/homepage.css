@@ -1,7 +1,6 @@
 body {
   width:100%;
   overflow-x:hidden;
-  overflow-y: visible;
   background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
 }
 
@@ -584,7 +583,7 @@ margin-left: -4em
 
   .landing-content p {
     width: 90%;
-    margin: 1em auto .5em;
+    margin: 2em auto .5em;
     font-size: 1.2em;
     color: #ffffff;
     font-family: 'Gochi Hand', cursive;
@@ -679,7 +678,7 @@ margin-left: -4em
 
 
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
 
   .pokeball-logo {
     margin-left: 10em
