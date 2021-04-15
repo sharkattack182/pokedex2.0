@@ -70,3 +70,17 @@ nav {
     font-size: 1.5em;
     font-family: 'VT323', monospace;
   }
+
+  .pika {
+    display: none
+  }
+
+
+  @media only screen and (min-width: 1200px) {
+
+    .pika {
+      display: inline;
+      height: 60vh;
+      margin: -3em auto 0
+    }
+  }
