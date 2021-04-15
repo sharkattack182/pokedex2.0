@@ -90,7 +90,8 @@ $(document).ready(() => {
         var newLevel = data.level + 1;
         
 
-        $.ajax({
+        if(score > 3) {
+          $.ajax({
             url: "/api/user_data",
             method: "PUT",
             data: {
@@ -121,6 +122,10 @@ $(document).ready(() => {
             })
             
         });
+        } else {
+          window.location.replace("/members")
+        }
+        
     }
     });
 
