@@ -106,9 +106,20 @@ $(document).ready(() => {
         }).then(result => {
             console.log("user info updated");
             console.log(result);
+            var text;
+
+            console.log(newLevel);
+
+            if(newLevel === 4) {
+              text = 'You Earned A ' + badgeName + "! You can now catch higher level Pokemon! You will now be logged out. Log back in for your stats to update!"
+            } else if (newLevel === 8) {
+              text = 'You Earned A ' + badgeName + "! You can now catch Legendary Pokemon! You will now be logged out. Log back in for your stats to update!"
+            } else {
+              text = 'You Earned A ' + badgeName + "! You will now be logged out. Log back in for your stats to update!"
+            };
             Swal.fire({
                 title: 'Sweet!',
-                text: 'You Earned A ' + badgeName + "! You will now be logged out. Log back in for your stats to update!",
+                text: text,
                 imageUrl: badgeImg,
                 imageWidth: "auto",
                 imageHeight: 200,

@@ -54,7 +54,7 @@ $(document).ready(() => {
 
   }
 
-  if(data.level < 8) {
+  if(data.level <= 8) {
     for (let i = data.level - 1; i < greyBadgesArr.length; i++) {
       const element = greyBadgesArr[i];
       const newDiv = $("<div>");

@@ -1,7 +1,7 @@
 body, html {
   max-height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
+  background-color: #f33b4d;
 }
 .pokeball-logo {
     margin-left: 1em

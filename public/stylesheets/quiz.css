@@ -3,7 +3,7 @@ body {
     overflow-x:hidden;
     overflow-y: visible;
     padding-top: 60px;
-    background: linear-gradient(to right, #be2938, #f33b4d, #be2938);
+    background-color: #f33b4d;
   }
   
   .pokeball-logo {

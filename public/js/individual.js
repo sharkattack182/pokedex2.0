@@ -1,6 +1,13 @@
 const urlParams = new URLSearchParams(location.search);
 const pokemonId = urlParams.get("id");
 
+
+$.get("/api/user_data").then((data) => {
+
+
+
+
+
 $.ajax({
   url: "https://pokeapi.co/api/v2/pokemon/" + pokemonId + "/",
   method: "GET",
@@ -47,7 +54,9 @@ $.ajax({
   var body = $(".container-flex")
   // console.log(captureRate < 200);
 
-  if(result.evolves_from_species === null && result.is_legendary === false && result.is_mythical === false) {
+console.log(data)
+
+  if(result.evolves_from_species === null && result.is_legendary === false && result.is_mythical === false && data.level) {
     console.log("Can Capture")
     var addBtn = $("<div>");
     addBtn.addClass("add-button");
@@ -56,7 +65,22 @@ $.ajax({
     body.append(addBtn)
   } 
 
-
+else if(data.level >= 4 && result.is_legendary === false && result.is_mythical === false) {
+  console.log("Can Capture")
+    var addBtn = $("<div>");
+    addBtn.addClass("add-button");
+    addBtn.text("Add Pokemon");
+    addBtn.attr("id", "add-pokemon")
+    body.append(addBtn)
+}
+ else if(data.level >= 8) {
+  console.log("Can Capture")
+  var addBtn = $("<div>");
+  addBtn.addClass("add-button");
+  addBtn.text("Add Pokemon");
+  addBtn.attr("id", "add-pokemon")
+  body.append(addBtn)
+ }
 
   
 $("#add-pokemon").on("click", function (event) {
@@ -96,14 +120,14 @@ $("#add-pokemon").on("click", function (event) {
 
 
 
-$.ajax({
-  url: "https://pokeapi.co/api/v2/evolution-chain/" + pokemonId + "/",
-  method: "GET",
-}).then((result) => {
-  console.log(result)
+// $.ajax({
+//   url: "https://pokeapi.co/api/v2/evolution-chain/" + pokemonId + "/",
+//   method: "GET",
+// }).then((result) => {
+//   console.log(result)
+
+// });
 
 });
 
-
-});
-
+})
